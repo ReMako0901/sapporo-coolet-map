@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "札幌クールスポット・トイレ予定データ",
+    "updated": "2026-07-10",
+    "description": "MVP用のサンプルです。後から札幌市のクーリングシェルター、公園トイレなどを同じ形式で追加します。"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-cool-chikaho",
+        "kind": "cool",
+        "name": "札幌駅前通地下歩行空間（サンプル）",
+        "address": "北海道札幌市中央区",
+        "hours": "施設情報に合わせて更新",
+        "note": "無料で涼める場所のサンプルピン",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.3545, 43.0642]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-toilet-odori",
+        "kind": "toilet",
+        "name": "大通公園周辺トイレ（サンプル）",
+        "address": "北海道札幌市中央区大通西",
+        "hours": "施設情報に合わせて更新",
+        "note": "公園トイレのサンプルピン",
+        "source": "https://www.city.sapporo.jp/ryokuka/top/koueniji/benjoichiran.html",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [141.3508, 43.0596]
+      }
+    }
+  ]
+}
