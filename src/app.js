@@ -2,10 +2,8 @@ const SAPPORO_CENTER = [43.0618, 141.3545];
 const DEFAULT_ZOOM = 15;
 const DATA_URL = "./data/spots.geojson";
 
-const intro = document.querySelector("#intro");
-const mapPanel = document.querySelector("#map-panel");
 const statusEl = document.querySelector("#status");
-const mapTitle = document.querySelector("#map-title");
+const locationDialog = document.querySelector("#location-dialog");
 const spotCount = document.querySelector("#spot-count");
 const spotsEl = document.querySelector("#spots");
 const dataNote = document.querySelector("#data-note");
@@ -32,28 +30,34 @@ const iconConfig = {
   },
 };
 
+initializeMap(SAPPORO_CENTER);
+setTimeout(openLocationDialog, 350);
+
 document.querySelector("#use-location").addEventListener("click", requestLocation);
 document.querySelector("#use-sapporo").addEventListener("click", () => {
-  showMap(SAPPORO_CENTER, "札幌中心部");
+  closeLocationDialog();
+  state.map.setView(SAPPORO_CENTER, DEFAULT_ZOOM);
   setStatus("札幌中心部を表示しています。");
 });
-document.querySelector("#recenter").addEventListener("click", recenter);
+document.querySelector("#locate").addEventListener("click", openLocationDialog);
 document.querySelector("#reload-spots").addEventListener("click", loadSpots);
 filterCool.addEventListener("change", renderSpots);
 filterToilet.addEventListener("change", renderSpots);
 
 async function requestLocation() {
+  closeLocationDialog();
+
   if (!("geolocation" in navigator)) {
     setStatus("このブラウザでは位置情報を取得できません。札幌中心部を表示します。");
-    showMap(SAPPORO_CENTER, "札幌中心部");
+    state.map.setView(SAPPORO_CENTER, DEFAULT_ZOOM);
     return;
   }
 
-  setStatus("ブラウザの確認で位置情報の利用を許可してください。");
+  setStatus("位置情報の許可を待っています。");
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const coords = [position.coords.latitude, position.coords.longitude];
-      showMap(coords, "現在地周辺");
+      state.map.setView(coords, DEFAULT_ZOOM);
       updateUserLocation(coords, position.coords.accuracy);
       setStatus("現在地を中心に地図を表示しました。");
     },
@@ -63,7 +67,7 @@ async function requestLocation() {
           ? "位置情報が許可されなかったため、札幌中心部を表示します。"
           : "位置情報を取得できなかったため、札幌中心部を表示します。";
       setStatus(message);
-      showMap(SAPPORO_CENTER, "札幌中心部");
+      state.map.setView(SAPPORO_CENTER, DEFAULT_ZOOM);
     },
     {
       enableHighAccuracy: true,
@@ -73,29 +77,24 @@ async function requestLocation() {
   );
 }
 
-function showMap(center, title) {
-  intro.hidden = true;
-  mapPanel.hidden = false;
-  mapTitle.textContent = title;
+function initializeMap(center) {
+  state.map = L.map("map", {
+    zoomControl: false,
+    attributionControl: true,
+  }).setView(center, DEFAULT_ZOOM);
 
-  if (!state.map) {
-    state.map = L.map("map", {
-      zoomControl: true,
-      attributionControl: true,
-    }).setView(center, DEFAULT_ZOOM);
+  L.control.zoom({
+    position: "bottomright",
+  }).addTo(state.map);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(state.map);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(state.map);
 
-    state.spotsLayer = L.layerGroup().addTo(state.map);
-    loadSpots();
-    return;
-  }
-
-  state.map.setView(center, DEFAULT_ZOOM);
+  state.spotsLayer = L.layerGroup().addTo(state.map);
+  loadSpots();
   setTimeout(() => state.map.invalidateSize(), 0);
 }
 
@@ -134,6 +133,28 @@ function recenter() {
 
   setStatus("現在地はまだ取得していません。もう一度トップから位置情報を許可してください。");
   state.map.setView(SAPPORO_CENTER, DEFAULT_ZOOM);
+}
+
+function openLocationDialog() {
+  if (!locationDialog) return;
+
+  if (typeof locationDialog.showModal === "function") {
+    if (!locationDialog.open) locationDialog.showModal();
+    return;
+  }
+
+  locationDialog.setAttribute("open", "");
+}
+
+function closeLocationDialog() {
+  if (!locationDialog?.open) return;
+
+  if (typeof locationDialog.close === "function") {
+    locationDialog.close();
+    return;
+  }
+
+  locationDialog.removeAttribute("open");
 }
 
 async function loadSpots() {

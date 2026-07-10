@@ -14,47 +14,29 @@
   </head>
   <body>
     <main class="app-shell">
-      <section class="intro" id="intro" aria-labelledby="app-title">
-        <div>
-          <p class="eyebrow">Sapporo Cool Spot Map</p>
-          <h1 id="app-title">近くの涼める場所とトイレを探す</h1>
-          <p class="lead">
-            暑い日の外出中に、休める場所とトイレをすばやく確認するための地図です。
-          </p>
-        </div>
-        <div class="intro-actions" aria-label="地図の表示方法">
-          <button class="primary-button" id="use-location" type="button">
-            現在地を使って表示
-          </button>
-          <button class="secondary-button" id="use-sapporo" type="button">
-            札幌中心部で表示
-          </button>
-        </div>
-        <p class="status" id="status" role="status">
-          位置情報はブラウザの許可後にだけ取得します。
-        </p>
-      </section>
-
-      <section class="map-panel" id="map-panel" aria-label="地図" hidden>
-        <header class="toolbar">
+      <section class="map-panel" id="map-panel" aria-label="地図">
+        <header class="app-header">
           <div>
-            <p class="eyebrow">OpenStreetMap</p>
-            <h2 id="map-title">札幌周辺</h2>
+            <p class="eyebrow">Sapporo Cool Spot</p>
+            <h1 id="app-title">涼みどころ</h1>
           </div>
-          <div class="toolbar-actions">
-            <button class="icon-button" id="recenter" type="button" title="現在地へ戻る" aria-label="現在地へ戻る">
-              ◎
+          <div class="header-actions">
+            <button class="icon-button" id="locate" type="button" title="現在地を取得" aria-label="現在地を取得">
+              ⦿
             </button>
             <button class="secondary-button compact" id="reload-spots" type="button">
-              データ再読込
+              更新
             </button>
           </div>
         </header>
+
+        <p class="status" id="status" role="status">札幌中心部を表示しています。</p>
+
         <div class="map-layout">
           <div id="map" class="map" aria-label="現在地周辺の地図"></div>
-          <aside class="spot-list" aria-labelledby="spots-title">
+          <aside class="spot-panel" aria-labelledby="spots-title">
             <div class="spot-list-header">
-              <h2 id="spots-title">オーバーレイ</h2>
+              <h2 id="spots-title">近くの候補</h2>
               <span id="spot-count">0件</span>
             </div>
             <div class="filter-row" aria-label="表示する施設">
@@ -74,6 +56,24 @@
           </aside>
         </div>
       </section>
+
+      <dialog class="location-dialog" id="location-dialog" aria-labelledby="location-title">
+        <form method="dialog" class="dialog-card">
+          <p class="eyebrow">現在地の利用</p>
+          <h2 id="location-title">今いる場所から探す？</h2>
+          <p class="dialog-copy">
+            許可すると現在地を中心に地図を表示します。拒否しても札幌中心部から使えます。
+          </p>
+          <div class="dialog-actions">
+            <button class="primary-button" id="use-location" type="button">
+              現在地を使う
+            </button>
+            <button class="secondary-button" id="use-sapporo" type="button">
+              使わない
+            </button>
+          </div>
+        </form>
+      </dialog>
     </main>
 
     <script
