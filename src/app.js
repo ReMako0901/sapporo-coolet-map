@@ -6,7 +6,6 @@ const SAPPORO_BOUNDS = [
 const DEFAULT_ZOOM = 15;
 const DATA_URL = "./data/spots.geojson";
 
-const mapEl = document.querySelector("#map");
 const statusEl = document.querySelector("#status");
 const locationDialog = document.querySelector("#location-dialog");
 const spotCount = document.querySelector("#spot-count");
@@ -84,41 +83,28 @@ async function requestLocation() {
 }
 
 function initializeMap(center) {
-  syncMapBoxSize();
-
   state.map = L.map("map", {
-    zoomControl: false,
+    zoomControl: true,
     attributionControl: true,
-    bounceAtZoomLimits: false,
-    doubleClickZoom: true,
-    dragging: true,
-    maxBounds: SAPPORO_BOUNDS,
-    maxBoundsViscosity: 0.8,
     minZoom: 10,
-    scrollWheelZoom: false,
-    tap: false,
-    touchZoom: "center",
+    zoomSnap: 0.25,
+    zoomDelta: 0.5,
   }).setView(center, DEFAULT_ZOOM);
 
-  L.control.zoom({
-    position: "bottomright",
-  }).addTo(state.map);
-
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    detectRetina: true,
     maxZoom: 19,
     attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(state.map);
 
   state.spotsLayer = L.layerGroup().addTo(state.map);
   loadSpots();
-  refreshMapSize();
   installMapResizeHandlers();
+  refreshMapSize();
 }
 
 function refreshMapSize() {
-  syncMapBoxSize();
-
   requestAnimationFrame(() => {
     state.map.invalidateSize({
       animate: false,
@@ -127,28 +113,15 @@ function refreshMapSize() {
   });
 }
 
-function syncMapBoxSize() {
-  if (!mapEl) return;
-
-  mapEl.style.height = "";
-  const width = Math.floor(mapEl.getBoundingClientRect().width);
-  if (!width) return;
-
-  const headerReserve = window.innerWidth >= 720 ? 96 : 260;
-  const maxByHeight = Math.max(240, Math.floor(window.innerHeight - headerReserve));
-  const size = Math.min(width, maxByHeight, 520);
-  mapEl.style.height = `${size}px`;
-}
-
 function installMapResizeHandlers() {
-  if ("ResizeObserver" in window && mapEl) {
-    const observer = new ResizeObserver(refreshMapSize);
-    observer.observe(mapEl);
-  }
-
+  window.addEventListener("load", () => {
+    refreshMapSize();
+    setTimeout(refreshMapSize, 150);
+    setTimeout(refreshMapSize, 600);
+  });
   window.addEventListener("resize", refreshMapSize);
   window.addEventListener("orientationchange", () => {
-    setTimeout(refreshMapSize, 250);
+    setTimeout(refreshMapSize, 350);
   });
 }
 
