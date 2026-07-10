@@ -2,15 +2,15 @@
   "name": "札幌クールスポットマップ MVP",
   "updated": "2026-07-10",
   "feature_count": {
-    "cool": 53,
+    "cool": 225,
     "toilet": 907,
-    "total": 960
+    "total": 1132
   },
   "sources": [
     {
       "name": "札幌市公共施設一覧",
       "url": "https://ckan.pf-sapporo.jp/dataset/public_facility",
-      "usage": "図書館、区民センター、地区センターなどの涼める公共施設を抽出"
+      "usage": "クーリングシェルター一覧の補助として図書館、区民センター、地区センターなどの涼める公共施設を抽出"
     },
     {
       "name": "札幌市公園トイレマップ",
@@ -20,7 +20,7 @@
     {
       "name": "札幌市クーリングシェルター一覧",
       "url": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
-      "usage": "次段階で照合する参考資料としてPDF全区分を保存"
+      "usage": "図書館、公共施設、商業施設、スーパー、ドラッグストアなどの涼める場所を抽出"
     }
   ]
 }

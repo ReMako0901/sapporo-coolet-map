@@ -12,12 +12,14 @@ from urllib.parse import quote
 from urllib.request import urlopen
 from xml.etree import ElementTree as ET
 
+import pdfplumber
 from openpyxl import load_workbook
 
 
 ROOT = Path(__file__).resolve().parents[1]
 TOILET_KML = ROOT / "data/raw/toilets/sapporo_park_toilets.kml"
 PUBLIC_FACILITY_XLSX = ROOT / "data/raw/public_facility/011006publicfacility.xlsx"
+COOLING_DIR = ROOT / "data/raw/cooling"
 GEOCODE_CACHE = ROOT / "data/raw/geocode_cache.json"
 OUTPUT = ROOT / "data/spots.geojson"
 
@@ -30,6 +32,14 @@ def clean_text(value: str) -> str:
     value = re.sub(r"<[^>]+>", "", value)
     value = re.sub(r"\n\s*\n+", "\n", value)
     return value.strip()
+
+
+def normalize_key(*values: str) -> str:
+    text = "|".join(values)
+    text = text.replace("\u3000", " ")
+    text = re.sub(r"\s+", "", text)
+    text = text.replace("－", "-").replace("―", "-").replace("‐", "-")
+    return text.lower()
 
 
 def parse_flags(description: str) -> dict[str, str | bool]:
@@ -217,8 +227,109 @@ def parse_public_facilities() -> list[dict]:
     return features
 
 
+def cooling_facility_category(name: str) -> str:
+    normalized = name.replace("－", "ー").replace("―", "ー").replace("‐", "ー")
+    if "図書" in normalized:
+        return "図書館"
+    if "区民センター" in normalized:
+        return "区民センター"
+    if "地区センター" in normalized:
+        return "地区センター"
+    if "イオン" in normalized:
+        return "商業施設"
+    if "マックスバリュ" in normalized or "フードセンター" in normalized:
+        return "スーパー"
+    if "コープさっぽろ" in normalized or "ラルズ" in normalized or "ビッグ" in normalized or "アークス" in normalized or "ラッキー" in normalized or "東光ストア" in normalized:
+        return "スーパー"
+    if "ツルハ" in normalized or "サツドラ" in normalized or "薬局" in normalized:
+        return "ドラッグストア・薬局"
+    if "博物館" in normalized or "美術館" in normalized or "資料館" in normalized or "センター" in normalized:
+        return "公共・文化施設"
+    return "クーリングシェルター"
+
+
+def parse_cooling_shelters(existing_keys: set[str]) -> list[dict]:
+    features = []
+    cache = load_geocode_cache()
+    pdfs = sorted(path for path in COOLING_DIR.glob("*.pdf") if path.name != "01_chuouku.pdf")
+
+    for pdf_path in pdfs:
+        with pdfplumber.open(pdf_path) as pdf:
+            for page in pdf.pages:
+                for table in page.extract_tables() or []:
+                    if not table or len(table) < 2:
+                        continue
+                    header = [clean_text(cell or "") for cell in table[0]]
+                    if "施設名" not in header or "所在地" not in header:
+                        continue
+
+                    indexes = {name: i for i, name in enumerate(header)}
+                    for row in table[1:]:
+                        values = [clean_text(cell or "") for cell in row]
+                        name = values[indexes["施設名"]]
+                        address = values[indexes["所在地"]]
+                        if not name or not address:
+                            continue
+
+                        address = "北海道札幌市" + address if not address.startswith("北海道") else address
+                        key = normalize_key(name, address)
+                        if key in existing_keys:
+                            continue
+
+                        coordinates = geocode_address(address, cache)
+                        if not coordinates:
+                            continue
+
+                        hours = values[indexes.get("利用時間", -1)] if "利用時間" in indexes else ""
+                        place = values[indexes.get("利用場所", -1)] if "利用場所" in indexes else ""
+                        closed = values[indexes.get("休館・休業日", -1)] if "休館・休業日" in indexes else ""
+                        capacity = values[indexes.get("利用可能人数\n※(最大)", -1)] if "利用可能人数\n※(最大)" in indexes else ""
+                        note = values[indexes.get("備考", -1)] if "備考" in indexes else ""
+                        details = []
+                        if place:
+                            details.append(place)
+                        if capacity:
+                            details.append(f"利用可能人数: {capacity}")
+                        if closed:
+                            details.append(f"休館・休業日: {closed}")
+                        if note:
+                            details.append(note)
+
+                        features.append(
+                            {
+                                "type": "Feature",
+                                "properties": {
+                                    "id": f"cool-shelter-{len(features) + 1:04d}",
+                                    "kind": "cool",
+                                    "name": name,
+                                    "category": cooling_facility_category(name),
+                                    "address": address,
+                                    "hours": hours,
+                                    "note": " / ".join(details),
+                                    "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+                                    "source_detail": f"札幌市クーリングシェルター一覧 PDF ({pdf_path.name})",
+                                    "updated": str(date.today()),
+                                },
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": coordinates,
+                                },
+                            }
+                        )
+                        existing_keys.add(key)
+
+    save_geocode_cache(cache)
+    return features
+
+
 def main() -> None:
-    cool_features = parse_public_facilities()
+    public_cool_features = parse_public_facilities()
+    existing_cool_keys = {
+        normalize_key(feature["properties"]["name"], feature["properties"]["address"])
+        for feature in public_cool_features
+    }
+    shelter_features = parse_cooling_shelters(existing_cool_keys)
+    cool_features = shelter_features + public_cool_features
     toilet_features = parse_toilet_kml()
     features = cool_features + toilet_features
     collection = {
@@ -232,6 +343,11 @@ def main() -> None:
                     "name": "札幌市公共施設一覧",
                     "url": "https://ckan.pf-sapporo.jp/dataset/public_facility",
                     "license": "CC BY 4.0",
+                },
+                {
+                    "name": "札幌市クーリングシェルター一覧",
+                    "url": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+                    "license": "札幌市公式サイト掲載情報",
                 },
                 {
                     "name": "札幌市 公園トイレについて",

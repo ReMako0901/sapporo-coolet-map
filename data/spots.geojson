@@ -11,6 +11,11 @@
         "license": "CC BY 4.0"
       },
       {
+        "name": "札幌市クーリングシェルター一覧",
+        "url": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "license": "札幌市公式サイト掲載情報"
+      },
+      {
         "name": "札幌市 公園トイレについて",
         "url": "https://www.city.sapporo.jp/ryokuka/top/koueniji/benjoichiran.html",
         "license": "札幌市オープンデータ / DATA-SMART CITY SAPPORO 掲載情報"
@@ -18,6 +23,3790 @@
     ]
   },
   "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0001",
+        "kind": "cool",
+        "name": "北区民センター",
+        "category": "区民センター",
+        "address": "北海道札幌市北区北25条西6丁目",
+        "hours": "①9:00～21:00\n②9:00～17:00",
+        "note": "①待合スペース（１～３階）\n②図書室 / 利用可能人数: ①37人\n②12人 / 休館・休業日: ①年末年始\n②毎月第４金曜日/蔵書一斉点検期\n間/年末年始 / ②読書をしながらお過ごしいただ\nけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.340225,
+          43.091721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0002",
+        "kind": "cool",
+        "name": "新琴似図書館",
+        "category": "図書館",
+        "address": "北海道札幌市北区新琴似7条4丁目1-2",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "1階図書室（「子どもの本コーナー」「新\n聞閲覧コーナー」を含む）\n2階閲覧室（「大集会室」「読み聞かせ\n室」「ロビー」を除く） / 利用可能人数: 99人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.328888,
+          43.112148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0003",
+        "kind": "cool",
+        "name": "札幌エルプラザ公共４施設",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市北区北８条西３丁目",
+        "hours": "8:45～18:00",
+        "note": "①１階エントランスロビー\n②２階交流広場 / 利用可能人数: ①８人\n②６人 / 休館・休業日: 年末年始（12月29日～1月３日）の\nほか臨時休館日あり",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.350281,
+          43.070877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0004",
+        "kind": "cool",
+        "name": "札幌サンプラザ",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市北区北24条西５丁目",
+        "hours": "9:00～21:00",
+        "note": "１階ロビー / 利用可能人数: ９人 / 休館・休業日: 年末年始 / 設備点検・工事・イベント開催等\nにより、ご利用いただけない場合\nがあります。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.342041,
+          43.090744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0005",
+        "kind": "cool",
+        "name": "札幌市下水道科学館",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市北区麻生町８丁目",
+        "hours": "9:30～17:00",
+        "note": "キッズスペース\n展示室 / 利用可能人数: 約30人 / 休館・休業日: 毎週月曜日（祝日に重なった場合\nは翌日休館）※7・8月は休館日無\nし",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.34256,
+          43.115871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0006",
+        "kind": "cool",
+        "name": "イオン札幌麻生店",
+        "category": "商業施設",
+        "address": "北海道札幌市北区北39条西4丁目1-5",
+        "hours": "地下1階食品売場/8:00～23:00\nその他の売場/9:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: 10人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.339767,
+          43.106503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0007",
+        "kind": "cool",
+        "name": "マックスバリュ北32条店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区北32条西13丁目1-1",
+        "hours": "24時間",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ９人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.329117,
+          43.100964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0008",
+        "kind": "cool",
+        "name": "マックスバリュ北店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区北25条西4丁目2-5",
+        "hours": "24時間",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.342819,
+          43.091618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0009",
+        "kind": "cool",
+        "name": "マックスバリュ新琴似店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区新琴似10条２丁目1番地",
+        "hours": "8:00～22:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ３人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.336472,
+          43.115417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0010",
+        "kind": "cool",
+        "name": "マックスバリュエクスプレス新川３条店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区新川3条3丁目３番23号",
+        "hours": "9:00～21:45",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: １人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.319427,
+          43.099815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0011",
+        "kind": "cool",
+        "name": "コープさっぽろしんことに店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区新琴似1条12丁目6-52",
+        "hours": "9:00～21:45",
+        "note": "イートインコーナー / 利用可能人数: 14人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.309021,
+          43.112431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0012",
+        "kind": "cool",
+        "name": "コープさっぽろとんでん店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区屯田5条7丁目1-1",
+        "hours": "9:00～21:45",
+        "note": "トイレ横\nサービスカウンター前 / 利用可能人数: ２人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.329163,
+          43.131138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0013",
+        "kind": "cool",
+        "name": "コープさっぽろ北12条店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区北１２条西１丁目１−５",
+        "hours": "月～土/10:00～23:00\n日/9:00～23:00",
+        "note": "２階 / 利用可能人数: ５人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.352539,
+          43.075401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0014",
+        "kind": "cool",
+        "name": "コープさっぽろあいの里店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区あいの里1条5丁目2",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー\n２階エスカレーター横 / 利用可能人数: 13人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.398102,
+          43.157181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0015",
+        "kind": "cool",
+        "name": "ラッキー篠路店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区篠路３条４丁目１番",
+        "hours": "9:00～19:00",
+        "note": "1階休憩スペース / 利用可能人数: 10人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.357971,
+          43.144863
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0016",
+        "kind": "cool",
+        "name": "北雄ラッキ－ 新琴似四番通店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区新琴似８条１０丁目１番２２号",
+        "hours": "9:00～19:00",
+        "note": "1階休憩スペース / 利用可能人数: 15人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.320847,
+          43.119495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0017",
+        "kind": "cool",
+        "name": "ビッグハウス太平店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区太平４条１丁目３番１号",
+        "hours": "9:00～0:00",
+        "note": "出入口横 / 利用可能人数: 2-3人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.346481,
+          43.129677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0018",
+        "kind": "cool",
+        "name": "ス－パ－ア－クスノース",
+        "category": "スーパー",
+        "address": "北海道札幌市北区篠路３条９丁目２番１５号",
+        "hours": "9:00～22:00",
+        "note": "イートイン / 利用可能人数: 24人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.371292,
+          43.143784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0019",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス新琴似店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区新琴似４条１７丁目１番２５号",
+        "hours": "9:00～21:00",
+        "note": "イートイン / 利用可能人数: 40人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.302368,
+          43.122166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0020",
+        "kind": "cool",
+        "name": "ビッグハウス新川店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区新川６条１４丁目１番１号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 28人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.303925,
+          43.113319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0021",
+        "kind": "cool",
+        "name": "ス－パ－ア－クスエクスプレス",
+        "category": "スーパー",
+        "address": "北海道札幌市北区新川西１条４丁目１番１号",
+        "hours": "9:00～21:00",
+        "note": "イートイン / 利用可能人数: 12人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.278885,
+          43.124317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0022",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス北24条店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区北２４条西９丁目１番１号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 40人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.336044,
+          43.089931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0023",
+        "kind": "cool",
+        "name": "東光ストア あいの里店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区あいの里1条5丁目2-3",
+        "hours": "9:00～22:00",
+        "note": "イートイン / 利用可能人数: 6～8人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.398102,
+          43.157181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0024",
+        "kind": "cool",
+        "name": "東光ストア 麻生店",
+        "category": "スーパー",
+        "address": "北海道札幌市北区北40条西4丁目2-15",
+        "hours": "9:00～23:00",
+        "note": "休憩スペース（ベンチ） / 利用可能人数: 3～4人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.338486,
+          43.108521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0025",
+        "kind": "cool",
+        "name": "ツルハドラッグ 新琴似4番通店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市北区新琴似７条１２丁目１番３３号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: 5人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.317642,
+          43.120083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0026",
+        "kind": "cool",
+        "name": "ツルハドラッグ麻生店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市北区北４０条西５丁目４番２０号",
+        "hours": "9:00～24:00",
+        "note": "イートインスペース / 利用可能人数: 7人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.337082,
+          43.109737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0027",
+        "kind": "cool",
+        "name": "ツルハドラッグ屯田5条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市北区屯田５条５丁目３番６号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: 7人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.332764,
+          43.130688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0028",
+        "kind": "cool",
+        "name": "ツルハドラッグ新川3条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市北区新川３条３丁目１番１２号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.319611,
+          43.097958
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0029",
+        "kind": "cool",
+        "name": "ツルハドラッグ百合が原店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市北区百合が原9丁目14番１",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.366714,
+          43.136497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0030",
+        "kind": "cool",
+        "name": "えるむ薬局",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市北区北１６条西４丁目1-19",
+        "hours": "月～金/9:00～17:30\n土/9:00～13:00",
+        "note": "待合室 / 利用可能人数: ５人 / 休館・休業日: 日曜、祭日、年末年始",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.34613,
+          43.079697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0031",
+        "kind": "cool",
+        "name": "だいまる薬局新川店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市北区新川8条17-769-8",
+        "hours": "月〜金/8:45〜17:45\n土(第2)/9:00～12:30\n土(第1,3,4,5)/11:00～12:00",
+        "note": "待合室スペース / 利用可能人数: ２人 / 休館・休業日: 日曜・祝日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.300186,
+          43.119942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0032",
+        "kind": "cool",
+        "name": "コーチャンフォー新川通り店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市北区新川３条１８丁目",
+        "hours": "9:00〜21:00",
+        "note": "文具コーナーなど\n（詳細は店舗にお問い合わせください） / 利用可能人数: 12人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.291321,
+          43.1147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0033",
+        "kind": "cool",
+        "name": "ケーズデンキ札幌麻生店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市北区北36条西10丁目1-5",
+        "hours": "10:00～20:00",
+        "note": "1階エントランス\n2階エントランス / 利用可能人数: 15人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.332672,
+          43.105953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0034",
+        "kind": "cool",
+        "name": "ケーズデンキ屯田店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市北区屯田8条10丁目1-1",
+        "hours": "10:00～20:00",
+        "note": "エントランスロビー / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (02_kitaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.322998,
+          43.140404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0035",
+        "kind": "cool",
+        "name": "東区民センター",
+        "category": "区民センター",
+        "address": "北海道札幌市東区北11条東7丁目（東区役所併\n設）",
+        "hours": "①9:00～21:00\n②9:00～17:00",
+        "note": "①待合スペース\n②図書室 / 利用可能人数: ①10人\n②８人 / 休館・休業日: ①年末年始\n②毎月第４金曜日/蔵書一斉点検期\n間/年末年始 / ②読書をしながらお過ごしいただ\nけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.363708,
+          43.076195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0036",
+        "kind": "cool",
+        "name": "元町図書館",
+        "category": "図書館",
+        "address": "北海道札幌市東区北30条東16丁目3-13",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "1階図書室 / 利用可能人数: 35人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.371552,
+          43.100883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0037",
+        "kind": "cool",
+        "name": "さとらんどセンター（札幌市農業体験交流",
+        "category": "公共・文化施設",
+        "address": "北海道札幌市東区丘珠町584-2",
+        "hours": "9:00～17:00",
+        "note": "１階ホール / 利用可能人数: 68人 / 休館・休業日: 11月４日～４月28日の月曜日（祝\n日の場合その翌日）、年末年始\n（12月28日～１月４日）",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.414398,
+          43.12051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0038",
+        "kind": "cool",
+        "name": "イオン札幌栄町店",
+        "category": "商業施設",
+        "address": "北海道札幌市東区北42条東16丁目1-5",
+        "hours": "1階食品売場/8:00～23:00\nその他の売場/10:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: 22人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.367203,
+          43.113583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0039",
+        "kind": "cool",
+        "name": "イオン札幌元町ショッピングセンター＆",
+        "category": "商業施設",
+        "address": "北海道札幌市東区北31条東15丁目1番1号",
+        "hours": "1階食品売場/8:00～23:00\nその他の売場/9:00～22.00\n専門店街/10:00～21:00",
+        "note": "休憩スペース、イートイン、フードコート\nなどの椅子ベンチ（詳細は店舗にお問い合\nわせください） / 利用可能人数: 364人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.36908,
+          43.101254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0040",
+        "kind": "cool",
+        "name": "イオンモール札幌苗穂＆イオン札幌苗穂",
+        "category": "商業施設",
+        "address": "北海道札幌市東区東苗穂2条3丁目1-1",
+        "hours": "1階食品売場/8:00～23:00\nその他の売場/9:00～22:00\n専門店街/10:00～21:00",
+        "note": "休憩スペース、イートイン、フードコート\nなどの椅子ベンチ（詳細は店舗にお問い合\nわせください） / 利用可能人数: 584人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.403885,
+          43.079685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0041",
+        "kind": "cool",
+        "name": "マックスバリュエクスプレス新道店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北34条東16丁目１-30",
+        "hours": "7:00～24:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ４人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.370773,
+          43.104935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0042",
+        "kind": "cool",
+        "name": "マックスバリュ光星店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北13条東7丁目2番",
+        "hours": "24時間",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.363083,
+          43.078369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0043",
+        "kind": "cool",
+        "name": "マックスバリュ北26条店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北26条東15丁目1-20",
+        "hours": "24時間",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ４人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.370331,
+          43.097328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0044",
+        "kind": "cool",
+        "name": "マックスバリュ元町店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北17条東16丁目1-10",
+        "hours": "1階/8:00～23:00\n2階/9:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ４人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.374008,
+          43.085121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0045",
+        "kind": "cool",
+        "name": "マックスバリュ北40条店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北40条東1丁目3-1",
+        "hours": "8:00～21:45",
+        "note": "休憩スペース、イートインなどの椅子ベン\nチ（詳細は店舗にお問い合わせください） / 利用可能人数: 16人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.34581,
+          43.107899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0046",
+        "kind": "cool",
+        "name": "ザ・ビッグ元町店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北24条東20丁目4-1",
+        "hours": "8:00～21:00",
+        "note": "フードコート・イートイン。休憩所・各風\n除室内ベンチ（詳細は店舗にお問い合わせ\nください） / 利用可能人数: 49人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.382675,
+          43.09457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0047",
+        "kind": "cool",
+        "name": "ザ・ビッグエクスプレス栄町店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北41条東17丁目４番１号",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.369217,
+          43.113197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0048",
+        "kind": "cool",
+        "name": "ザ・ビッグ東雁来店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区東雁来10条３丁目１番６号",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ６人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.427094,
+          43.09428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0049",
+        "kind": "cool",
+        "name": "ザ・ビッグエクスプレスモエレ店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区東苗穂13条2丁目12-１",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.421677,
+          43.106438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0050",
+        "kind": "cool",
+        "name": "コープさっぽろ元町店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北２１条東１６丁目２−１２",
+        "hours": "9:00～21:45",
+        "note": "トイレ前 / 利用可能人数: ３人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.374008,
+          43.091145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0051",
+        "kind": "cool",
+        "name": "コープさっぽろ新道店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区伏古11条３丁目１−45",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー\n入り口横 / 利用可能人数: 22人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.398895,
+          43.095501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0052",
+        "kind": "cool",
+        "name": "ラッキー北４９条店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北４９条東７丁目２番１５号",
+        "hours": "9:00～19:00",
+        "note": "1階休憩スペース / 利用可能人数: 5人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.353943,
+          43.121132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0053",
+        "kind": "cool",
+        "name": "アリオ札幌",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市東区北7条東9-2-20",
+        "hours": "10:00～21:00",
+        "note": "館内各所(ソファ設置スペース等） / 利用可能人数: 100人 / 休館・休業日: なし ※予告なく変更になる場合\nがございます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.370392,
+          43.072914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0054",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス光星店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北１４条東３丁目１番３０号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 25人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.357635,
+          43.078709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0055",
+        "kind": "cool",
+        "name": "ラルズマート 北35条店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北３５条東４丁目１番１号",
+        "hours": "9:00～21:00",
+        "note": "1階階段横 / 利用可能人数: 2-3人 / 休館・休業日: 元日 / 長椅子があります。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.351654,
+          43.103458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0056",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス苗穂店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北７条東１８丁目２番１０号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 36人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.380753,
+          43.074791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0057",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス東苗穂店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区東苗穂８条１丁目１８番１号",
+        "hours": "9:00～21:00",
+        "note": "イートイン / 利用可能人数: 36人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.408783,
+          43.099606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0058",
+        "kind": "cool",
+        "name": "東光ストア 北栄店",
+        "category": "スーパー",
+        "address": "北海道札幌市東区北27条東1丁目3-1",
+        "hours": "9:00～22:00",
+        "note": "ＡＴＭ横イートイン / 利用可能人数: 5～6人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.34903,
+          43.094734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0059",
+        "kind": "cool",
+        "name": "ツルハドラッグ 本町店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区本町２条４丁目8番16号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.389435,
+          43.080547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0060",
+        "kind": "cool",
+        "name": "ツルハドラッグ 北6条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区北６条東３丁目1-1ダ・ヴィン\nチモール１階",
+        "hours": "8:00～23:00",
+        "note": "イートインスペース / 利用可能人数: 16人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.358719,
+          43.069881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0061",
+        "kind": "cool",
+        "name": "ツルハドラッグ 東苗穂7条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区東苗穂7条3丁目2番1号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.412186,
+          43.093567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0062",
+        "kind": "cool",
+        "name": "ツルハドラッグ北41条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区北41条東5丁目2番18号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.352386,
+          43.110775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0063",
+        "kind": "cool",
+        "name": "ツルハドラッグ伏古11条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区伏古１１条４丁目1番７号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.399902,
+          43.095646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0064",
+        "kind": "cool",
+        "name": "ツルハドラッグ北35条東店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区北35条東19丁目１番15号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.374817,
+          43.106712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0065",
+        "kind": "cool",
+        "name": "クオール薬局札幌東区役所前店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区北11条東8-1-3",
+        "hours": "月〜水･金/8:30〜18:00\n木/8:30〜19:00\n土/8:30〜16:00",
+        "note": "待合室スペース / 利用可能人数: ２人 / 休館・休業日: 日曜・祝日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.364441,
+          43.076061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0066",
+        "kind": "cool",
+        "name": "元町調剤薬局",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市東区北21条東16丁目1番11号 110松\n井ビル1階",
+        "hours": "月〜水･金/9:00〜18:00\n木/9:00〜17:00\n土/9:00〜13:00",
+        "note": "待合室スペース / 利用可能人数: ２人 / 休館・休業日: 日曜・祝日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.372696,
+          43.090584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0067",
+        "kind": "cool",
+        "name": "ケーズデンキ東苗穂店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市東区東苗穂1条3丁目1-15",
+        "hours": "10:00～20:00",
+        "note": "1階エントランス / 利用可能人数: 10人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (03_higasiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.400314,
+          43.078094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0068",
+        "kind": "cool",
+        "name": "白石区民センター",
+        "category": "区民センター",
+        "address": "北海道札幌市白石区南郷通1丁目南8",
+        "hours": "①9:00～21:00\n②9:00～17:00",
+        "note": "①待合スペース\n②図書室 / 利用可能人数: ①30人\n②20人 / 休館・休業日: ①年末年始\n②毎月第４金曜日/蔵書一斉点検期\n間/年末年始 / ②読書をしながらお過ごしいただ\nけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.396545,
+          43.04546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0069",
+        "kind": "cool",
+        "name": "東札幌図書館",
+        "category": "図書館",
+        "address": "北海道札幌市白石区東札幌4条4丁目1-1",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "1階図書室\n・雑誌コーナー\n・新聞閲覧コーナー\n・資料閲覧コーナー\n・児童閲覧コーナー\n２階\n・読書室 / 利用可能人数: 78人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.389969,
+          43.050705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0070",
+        "kind": "cool",
+        "name": "えほん図書館",
+        "category": "図書館",
+        "address": "北海道札幌市白石区南郷通1丁目南8-1\n白石区複合庁舎6階",
+        "hours": "月～日/9:00～17:00",
+        "note": "閲覧スペース / 利用可能人数: 約50人 / 休館・休業日: 図書整理日（毎月第4金曜日）\n蔵書一斉点検期間\n年末年始（12月29日～1月3日） / ・館内で読書をしながらお過ごし\nいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.395813,
+          43.045238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0071",
+        "kind": "cool",
+        "name": "イオン東札幌店",
+        "category": "商業施設",
+        "address": "北海道札幌市白石区東札幌3条2丁目1",
+        "hours": "1階食品売場/8:00～23:00\nその他の売場/10:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: 47人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.385498,
+          43.052521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0072",
+        "kind": "cool",
+        "name": "イオン北郷店",
+        "category": "商業施設",
+        "address": "北海道札幌市白石区北郷2条7丁目6-25",
+        "hours": "食品売場/9:00～23:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: 24人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.423889,
+          43.052494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0073",
+        "kind": "cool",
+        "name": "マックスバリュ東札幌店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区東札幌4条1丁目1-1",
+        "hours": "9:00～23:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.385544,
+          43.05547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0074",
+        "kind": "cool",
+        "name": "マックスバリュ菊水店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区菊水2条2丁目1-11",
+        "hours": "24時間",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: １人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.371811,
+          43.057873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0075",
+        "kind": "cool",
+        "name": "ザ・ビッグエクスプレス白石中央店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区本通２丁目北８－45",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: １人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.406342,
+          43.051136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0076",
+        "kind": "cool",
+        "name": "コープさっぽろしろいし中央店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区中央３条３丁目４−４８",
+        "hours": "9:00～21:45",
+        "note": "１階階段横\n２階イートインコーナー / 利用可能人数: 29人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.398438,
+          43.059471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0077",
+        "kind": "cool",
+        "name": "コープさっぽろほんどおり店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区本通８南１−１",
+        "hours": "9:00～21:50",
+        "note": "イートインコーナー / 利用可能人数: 17人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.417175,
+          43.04406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0078",
+        "kind": "cool",
+        "name": "コープさっぽろ川下店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区川下３条４丁目１−１",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー / 利用可能人数: 14人 / 休館・休業日: 1/1・1/2 / 1F西側入口横に1人用イス×2台",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.444122,
+          43.048874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0079",
+        "kind": "cool",
+        "name": "コープさっぽろルーシー店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区 栄通１８丁目５−３５",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー\n２階エスカレーター横 など（詳細は店舗\nにお問い合わせください） / 利用可能人数: 58人 / 休館・休業日: 1/1・1/2 / １F／２F併せて",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.396408,
+          43.045555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0080",
+        "kind": "cool",
+        "name": "ラッキー菊水元町店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区菊水元町３条２丁目２番８号",
+        "hours": "9:00～19:00",
+        "note": "1階休憩スペース / 利用可能人数: ５人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.402985,
+          43.069061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0081",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス菊水店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区菊水３条５丁目２番２５号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 56人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.378693,
+          43.053875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0082",
+        "kind": "cool",
+        "name": "ラルズマート新ほくと店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区川下４条１丁目１番１号",
+        "hours": "9:00～21:00",
+        "note": "イートイン / 利用可能人数: ８人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.441513,
+          43.05228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0083",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス白石店",
+        "category": "スーパー",
+        "address": "北海道札幌市白石区平和通り３丁目北１番１号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 24人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.405975,
+          43.054516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0084",
+        "kind": "cool",
+        "name": "ツルハドラッグ栄通店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市白石区栄通14丁目2-12番1号",
+        "hours": "9:00～23:00",
+        "note": "イートインスペース / 利用可能人数: 4人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (04_siroisiku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.420212,
+          43.033199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0085",
+        "kind": "cool",
+        "name": "厚別区民センター\n※冷房設備修繕のため、７月１日以降開\n始予定していますが、 修繕状況により\n時期が前後する可能性がございますこと\n予めご了承ください。",
+        "category": "区民センター",
+        "address": "北海道札幌市厚別区厚別中央1条5丁目",
+        "hours": "9:00～21:00",
+        "note": "待合スペース / 利用可能人数: 10人 / 休館・休業日: ・年末年始 / ・厚別図書館併設",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.472946,
+          43.036041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0086",
+        "kind": "cool",
+        "name": "厚別図書館",
+        "category": "図書館",
+        "address": "北海道札幌市厚別区厚別中央1条5丁目3-15",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "1階図書室\n2階閲覧室\n2階読書集会室\n2階ホール / 利用可能人数: 119人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.474335,
+          43.036896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0087",
+        "kind": "cool",
+        "name": "札幌市エレクトロニクスセンター\n※冷房設備稼働時期の関係で６月３日以\n降のご利用となります",
+        "category": "公共・文化施設",
+        "address": "北海道札幌市厚別区下野幌テクノパーク1丁目1-\n10",
+        "hours": "9:00～21:00",
+        "note": "多目的ホール（１階） / 利用可能人数: 60人程度 / 休館・休業日: 日曜日・祝日、年末年始（12月29\n日～１月３日） / ・平日の昼食時間帯（12～13時）\nは、入居及び立地企業の社員等で\n相当数の座席を使用することか\nら、当該時間帯の受け入れが難し\nい可能性があります。\n・駐車場を利用される場合は、所\n定の駐車料金がかかります。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.503281,
+          43.032234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0088",
+        "kind": "cool",
+        "name": "北海道博物館",
+        "category": "公共・文化施設",
+        "address": "北海道札幌市厚別区厚別町小野幌53-2",
+        "hours": "５月～９月 9:30～17:00\n10月～４月 9:30～16:30",
+        "note": "休憩ラウンジ / 利用可能人数: 約50人 / 休館・休業日: 毎週月曜日（祝日・振替休日の場\n合は直後の平日）\n年末年始（12月29日〜1月3日）",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.495514,
+          43.053814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0089",
+        "kind": "cool",
+        "name": "イオン新さっぽろ店",
+        "category": "商業施設",
+        "address": "北海道札幌市厚別区厚別中央2条5丁目7-1",
+        "hours": "地下1階食品売場/8:00～22:00\nその他の売場/9:00～22:00",
+        "note": "休憩スペース、イートインなどの椅子ベン\nチ（詳細は店舗にお問い合わせください） / 利用可能人数: 10人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.471695,
+          43.036572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0090",
+        "kind": "cool",
+        "name": "イオン札幌厚別店",
+        "category": "商業施設",
+        "address": "北海道札幌市厚別区厚別西4条6丁目700-126",
+        "hours": "8:00～23:00",
+        "note": "フードコート及びイートインスペース、\n共用スペース・通路\n（詳細は店舗にお問い合わせください） / 利用可能人数: 283人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.469086,
+          43.053806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0091",
+        "kind": "cool",
+        "name": "マックスバリュ厚別店",
+        "category": "スーパー",
+        "address": "北海道札幌市厚別区厚別南5丁目22-50",
+        "hours": "24時間",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: 15人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.47348,
+          43.021626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0092",
+        "kind": "cool",
+        "name": "マックスバリュ厚別東店",
+        "category": "スーパー",
+        "address": "北海道札幌市厚別区厚別東1条1丁目3-1",
+        "hours": "8:00～23:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.483383,
+          43.039024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0093",
+        "kind": "cool",
+        "name": "フードセンター森林公園店",
+        "category": "スーパー",
+        "address": "北海道札幌市厚別区厚別北２条５丁目1-1",
+        "hours": "7:00～22:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: １人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.480698,
+          43.056847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0094",
+        "kind": "cool",
+        "name": "ス－パ－ア－クスイースト",
+        "category": "スーパー",
+        "address": "北海道札幌市厚別区厚別中央２条２丁目２－６",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 32人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.459885,
+          43.034355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0095",
+        "kind": "cool",
+        "name": "東光ストア 大谷地店",
+        "category": "スーパー",
+        "address": "北海道札幌市厚別区大谷地東3丁目3-20",
+        "hours": "9:00～23:00",
+        "note": "イートイン / 利用可能人数: 6～8人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.453415,
+          43.026966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0096",
+        "kind": "cool",
+        "name": "ケーズデンキ厚別店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市厚別区厚別東五条8丁目7-1",
+        "hours": "10:00～20:00",
+        "note": "2階エントランス / 利用可能人数: 20人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (05_atubetuku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.484512,
+          43.057201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0097",
+        "kind": "cool",
+        "name": "清田区民センター",
+        "category": "区民センター",
+        "address": "北海道札幌市清田区清田1条2丁目",
+        "hours": "9:00～21:00",
+        "note": "待合スペース（１階） / 利用可能人数: 21人 / 休館・休業日: ・年末年始",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.439804,
+          43.005268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0098",
+        "kind": "cool",
+        "name": "清田図書館",
+        "category": "図書館",
+        "address": "北海道札幌市清田区平岡1条1丁目2-1清田区総合\n庁舎4階",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "図書室\n読書室 / 利用可能人数: 86人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.443863,
+          42.999481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0099",
+        "kind": "cool",
+        "name": "イオン札幌清田店",
+        "category": "商業施設",
+        "address": "北海道札幌市清田区平岡1条1丁目1-3",
+        "hours": "1階 8:00～23:00\n2階 9:00～21:00",
+        "note": "1階フードコート\n3階セリア前ベンチ\n（詳細は店舗にお問い合わせください） / 利用可能人数: 88人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.442932,
+          42.998013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0100",
+        "kind": "cool",
+        "name": "イオンモール札幌平岡＆イオン札幌平岡",
+        "category": "商業施設",
+        "address": "北海道札幌市清田区平岡3条5丁目3-1",
+        "hours": "1階食品売場/8:00～23:00\nその他の売場/9:00～22:00\n専門店街/10:00～21:00",
+        "note": "休憩スペース、イートイン、フードコート\nなどの椅子ベンチ（詳細は店舗にお問い合\nわせください） / 利用可能人数: 567人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.458145,
+          42.998219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0101",
+        "kind": "cool",
+        "name": "マックスバリュ北野店",
+        "category": "スーパー",
+        "address": "北海道札幌市清田区北野7条3丁目７-15",
+        "hours": "24時間",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: １人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.442673,
+          43.022537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0102",
+        "kind": "cool",
+        "name": "コープさっぽろ平岡店",
+        "category": "スーパー",
+        "address": "北海道札幌市清田区平岡公園東３丁目１−５",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー / 利用可能人数: 22人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.472565,
+          43.010578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0103",
+        "kind": "cool",
+        "name": "ラッキー清田店",
+        "category": "スーパー",
+        "address": "北海道札幌市清田区清田２条２丁目１６番７号",
+        "hours": "9:00～19:00",
+        "note": "1階休憩スペース / 利用可能人数: ５人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.434784,
+          43.002983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0104",
+        "kind": "cool",
+        "name": "ビッグハウス里塚店",
+        "category": "スーパー",
+        "address": "北海道札幌市清田区美しが丘１条７丁目１番１号",
+        "hours": "9:00～21:00",
+        "note": "出入口横 / 利用可能人数: 2-3人 / 休館・休業日: 元日 / 長椅子があります。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.461029,
+          42.98254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0105",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス北野店",
+        "category": "スーパー",
+        "address": "北海道札幌市清田区北野３条２丁目１３番８８号",
+        "hours": "9:00～23:00",
+        "note": "イートイン / 利用可能人数: 10人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.432083,
+          43.012978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0106",
+        "kind": "cool",
+        "name": "東光ストア 平岡店",
+        "category": "スーパー",
+        "address": "北海道札幌市清田区平岡7条2丁目2-1",
+        "hours": "9:00～23:00",
+        "note": "1階・2階休憩スペース / 利用可能人数: 8～10人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.454025,
+          43.010593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0107",
+        "kind": "cool",
+        "name": "東光ストア 真栄店",
+        "category": "スーパー",
+        "address": "北海道札幌市清田区真栄4条2丁目1-48",
+        "hours": "9:00～21:00",
+        "note": "2階エスカレーター横 / 利用可能人数: 2～4人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.440399,
+          42.98798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0108",
+        "kind": "cool",
+        "name": "ツルハドラッグ 北野店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市清田区北野7条5丁目12番20号",
+        "hours": "9:00～23:00",
+        "note": "イートインスペース / 利用可能人数: ４人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.452805,
+          43.018524
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0109",
+        "kind": "cool",
+        "name": "コーチャンフォー美しが丘店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市清田区美しが丘１条５丁目２番１号",
+        "hours": "9:00〜21:00",
+        "note": "1F書籍コーナー内 椅子設置箇所、\n2Fカプセルトイコーナー内ベンチ\n（詳細は店舗にお問い合わせください） / 利用可能人数: 16人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.456055,
+          42.985435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0110",
+        "kind": "cool",
+        "name": "TSUTAYA美しが丘店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市清田区美しが丘３条４丁目１－１０",
+        "hours": "10:00〜21:00",
+        "note": "店内各休憩スペース / 利用可能人数: 30人 / 休館・休業日: なし / 店内併設のカフェのお席はご注文\n頂いた方のみご利用可能なため対\n象外ですが、店内の本を座って読\nめるスペースや学習スペース、\nキッズスペースなどが点在してお\nり、こちらはどなたでもご利用可\n能です。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (07_kiyotaku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.451096,
+          42.982212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0111",
+        "kind": "cool",
+        "name": "手稲区民センター",
+        "category": "区民センター",
+        "address": "北海道札幌市手稲区前田1条11丁目",
+        "hours": "9:00～21:00",
+        "note": "待合スペース / 利用可能人数: 区役所開庁時\n87人\n区役所閉庁時\n33人 / 休館・休業日: ・年末年始 / ・手稲区役所併設",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.244949,
+          43.120945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0112",
+        "kind": "cool",
+        "name": "曙図書館",
+        "category": "図書館",
+        "address": "北海道札幌市手稲区曙2条1丁目2-50",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "２階閲覧室\n２階集会室１ / 利用可能人数: 89人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.239975,
+          43.126884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0113",
+        "kind": "cool",
+        "name": "イオン札幌手稲駅前店",
+        "category": "商業施設",
+        "address": "北海道札幌市手稲区前田1条11丁目1-1",
+        "hours": "1階 8:00～23:00\n2階 9:00～21:00",
+        "note": "1. フードコート・屋内広場・第二駐車場\n側風除室（詳細は店舗にお問い合わせくだ\nさい） / 利用可能人数: 164人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.247055,
+          43.121407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0114",
+        "kind": "cool",
+        "name": "イオンスーパーセンター手稲山口店",
+        "category": "商業施設",
+        "address": "北海道札幌市手稲区明日風6丁目1番1号",
+        "hours": "直営売場/8:00～22:00\nその他の売場/9:00～22:00",
+        "note": "休憩スペース、イートインなどの椅子ベン\nチ（詳細は店舗にお問い合わせください） / 利用可能人数: 91人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.233948,
+          43.141628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0115",
+        "kind": "cool",
+        "name": "マックスバリュ新発寒店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区新発寒２条１丁目１番３号",
+        "hours": "8:00～21:45",
+        "note": "休憩スペース、イートインなどの椅子ベン\nチ（詳細は店舗にお問い合わせください） / 利用可能人数: 55人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.273376,
+          43.106483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0116",
+        "kind": "cool",
+        "name": "ザ・ビッグエクスプレス前田店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区前田８条10丁目６－25",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.259933,
+          43.13031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0117",
+        "kind": "cool",
+        "name": "コープさっぽろ西宮の沢店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区西宮の沢３条１丁目１２−１",
+        "hours": "9:00～21:45",
+        "note": "イートインコーナー / 利用可能人数: 10人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.264175,
+          43.098347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0118",
+        "kind": "cool",
+        "name": "コープさっぽろ新はっさむ店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区新発寒５条５丁目１−１０",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー / 利用可能人数: 20人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.270493,
+          43.115067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0119",
+        "kind": "cool",
+        "name": "コープさっぽろ星置店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区星置１条３丁目２−２",
+        "hours": "9:00～21:00",
+        "note": "１階、２階イートインコーナー\n入り口横 / 利用可能人数: 30人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.210068,
+          43.133213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0120",
+        "kind": "cool",
+        "name": "北雄ラッキ－ 星置駅前店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区星置１条２丁目１番１号",
+        "hours": "9:00～19:00",
+        "note": "1階休憩スペース / 利用可能人数: 10人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.210953,
+          43.132622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0121",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス星置店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区手稲山口４７８番地１",
+        "hours": "9:00～21:45",
+        "note": "イートイン / 利用可能人数: 24人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.211441,
+          43.139706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0122",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス宮の沢店",
+        "category": "スーパー",
+        "address": "北海道札幌市手稲区西宮の沢５条２丁目１１番２\n０号",
+        "hours": "9:00～23:00",
+        "note": "イートイン / 利用可能人数: 12人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.260117,
+          43.095425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0123",
+        "kind": "cool",
+        "name": "ツルハドラッグ星置駅前店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市手稲区星置１条２丁目２－１",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: 10人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.212845,
+          43.133667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0124",
+        "kind": "cool",
+        "name": "ハロー薬局 稲穂店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市手稲区稲穂２条７丁目１－１０",
+        "hours": "平日/9:00～17:00\n土曜/9:00～13:00",
+        "note": "待合室 / 利用可能人数: ４人 / 休館・休業日: 日曜 祝日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.213501,
+          43.128609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0125",
+        "kind": "cool",
+        "name": "AGHトヨタ札幌 アネックス手稲",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市手稲区富丘３条５丁目６−１",
+        "hours": "9:15～17:45",
+        "note": "店舗ショールーム / 利用可能人数: 6～10人 / 休館・休業日: 定休日：月曜日・火曜日、GW休\n業：4/27～5/6、夏季休業：8/10\n～8/18、年末年始休業：12/28～\n1/5 / 店舗内空いてるお席でご自由にご\n利用ください。テーブル席中心と\nなっておりますので、店内の混雑\n状況によっては、相席のご利用も\nございますのでご了承ください。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (10_teineku0525.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.249115,
+          43.109871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0126",
+        "kind": "cool",
+        "name": "南区民センター",
+        "category": "区民センター",
+        "address": "北海道札幌市南区真駒内幸町2丁目",
+        "hours": "9:00～17:00",
+        "note": "図書室 / 利用可能人数: 20人 / 休館・休業日: ・毎月第４金曜日\n・蔵書一斉点検期間\n・年末年始 / ・読書をしながらお過ごしいただ\nけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.354233,
+          42.99007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0127",
+        "kind": "cool",
+        "name": "澄川図書館",
+        "category": "図書館",
+        "address": "北海道札幌市南区澄川4条4丁目5-6",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "1階図書室\n2階閲覧室 / 利用可能人数: 44人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.368591,
+          43.012821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0128",
+        "kind": "cool",
+        "name": "札幌市交通資料館",
+        "category": "公共・文化施設",
+        "address": "北海道札幌市南区真駒内東町１丁目１番20号",
+        "hours": "9:30～16:30",
+        "note": "休憩スペース / 利用可能人数: 約20人 / 休館・休業日: 毎週水曜日（市内小学校の夏休み\n期間を除く）",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.364716,
+          43.004833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0129",
+        "kind": "cool",
+        "name": "イオン札幌藻岩店",
+        "category": "商業施設",
+        "address": "北海道札幌市南区川沿2条2丁目1番1号",
+        "hours": "1階食食品売場/8:00～22:00\nその他の売場/9:00～21:00",
+        "note": "休憩スペース、イートイン、フードコート\nなどの椅子ベンチ（詳細は店舗にお問い合\nわせください） / 利用可能人数: 284人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.33757,
+          42.999588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0130",
+        "kind": "cool",
+        "name": "マックスバリュ澄川店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区澄川４条２丁目２－６",
+        "hours": "1階/24時間\n2階/10:00～22:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: 10人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.366608,
+          43.016575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0131",
+        "kind": "cool",
+        "name": "ザ・ビッグ石山店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区石山２条９丁目７番58号",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ４人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.313705,
+          42.959721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0132",
+        "kind": "cool",
+        "name": "コープさっぽろ西岡店\n※2026年6月2日、空調が故障したため当\n面の間クーリングシェルターとしてご利\n用いただけません。復旧時期は6月下旬\nを見込んでいます。復旧次第この一覧で\nお知らせします。",
+        "category": "スーパー",
+        "address": "北海道札幌市南区澄川６条４丁目１−１",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー / 利用可能人数: 15人 / 休館・休業日: 1/1・1/2 / ベーカリーコーナー横ソファ１人\n用3台",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.37413,
+          43.012138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0133",
+        "kind": "cool",
+        "name": "コープさっぽろソシア店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区川沿5条2丁目3-10",
+        "hours": "9:00～21:50",
+        "note": "イートインコーナー / 利用可能人数: 20人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.334381,
+          42.991539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0134",
+        "kind": "cool",
+        "name": "コープさっぽろ藤野店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区藤野３条６丁目２−１",
+        "hours": "9:00～22:00",
+        "note": "イートインコーナー / 利用可能人数: 25人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.297699,
+          42.961494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0135",
+        "kind": "cool",
+        "name": "ラッキー川沿店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区川沿１２条２丁目１番",
+        "hours": "9:00～19:00",
+        "note": "2階休憩スペース / 利用可能人数: ５人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.335388,
+          42.981274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0136",
+        "kind": "cool",
+        "name": "ラルズマート真駒内店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区真駒内幸町１丁目２番３号",
+        "hours": "9:00～21:00",
+        "note": "1階階段横 / 利用可能人数: 2-3人 / 休館・休業日: 元日 / 長椅子があります。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.351334,
+          42.99028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0137",
+        "kind": "cool",
+        "name": "ラルズマート真駒内上町店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区真駒内上町３丁目２番１号",
+        "hours": "9:00～21:00",
+        "note": "イートイン / 利用可能人数: 8人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.353256,
+          42.996315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0138",
+        "kind": "cool",
+        "name": "ス－パ－ア－クスサウス",
+        "category": "スーパー",
+        "address": "北海道札幌市南区川沿１５条１丁目１番５５号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 12人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.335785,
+          42.975483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0139",
+        "kind": "cool",
+        "name": "東光ストア 自衛隊駅前店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区澄川3条6丁目3-1",
+        "hours": "9:00～23:00",
+        "note": "イートイン / 利用可能人数: 5～6人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.364349,
+          43.008144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0140",
+        "kind": "cool",
+        "name": "東光ストア 藤野店",
+        "category": "スーパー",
+        "address": "北海道札幌市南区藤野2条4丁目1-2",
+        "hours": "9:00～22:00",
+        "note": "1階・2階休憩スペース / 利用可能人数: 8～10人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (minamiku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.304108,
+          42.961426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0141",
+        "kind": "cool",
+        "name": "西岡図書館",
+        "category": "図書館",
+        "address": "北海道札幌市豊平区西岡3条6丁目6-1",
+        "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
+        "note": "1階図書室\n2階閲覧室 / 利用可能人数: 91人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.387039,
+          43.01376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0142",
+        "kind": "cool",
+        "name": "札幌市博物館活動センター",
+        "category": "公共・文化施設",
+        "address": "北海道札幌市豊平区平岸5条15丁目1－6",
+        "hours": "10:00～17:00",
+        "note": "図書スペース / 利用可能人数: 約10人 / 休館・休業日: 日曜日、月曜日、祝日、年末年始\n（12月28日から１月3日まで）",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.374237,
+          43.020023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0143",
+        "kind": "cool",
+        "name": "札幌国際ユースホステル\n※冷房設備稼働時期の関係で６月３日以\n降のご利用となります",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市豊平区豊平６条６丁目5-35",
+        "hours": "9:00～20:00",
+        "note": "１階・ロビー / 利用可能人数: 12人 / 休館・休業日: なし / 宿泊者との共用スペースになりま\nすので、ご利用の際はフロントに\nお声掛けください。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.370972,
+          43.047546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0144",
+        "kind": "cool",
+        "name": "札幌市月寒公民館",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市豊平区月寒中央通7丁目8-19",
+        "hours": "9:00～17:00 (図書室利用時間)",
+        "note": "２階 図書室 / 利用可能人数: 10人 / 休館・休業日: 図書室休室日\n・月曜日・祝日・図書整理日（第\n４金曜日）・蔵書一斉点検日（施\n設ホームページに別途掲載）\n・年末年始(12/29～1/3)",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.396454,
+          43.031128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0145",
+        "kind": "cool",
+        "name": "北海道立総合体育センター（北海きた\nえーる）",
+        "category": "公共・文化施設",
+        "address": "北海道札幌市豊平区豊平5条11丁目1‐1",
+        "hours": "9:00～21:00\n※情報資料室は9:00～18:00",
+        "note": "1階ロビー、地下1階ロビー、情報資料室 / 利用可能人数: 120人 / 休館・休業日: 月2回（月曜日・不定休） / 施設の貸出状況により、受入可能\n人数が減る場合があります。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.376465,
+          43.043945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0146",
+        "kind": "cool",
+        "name": "イオン札幌西岡ショッピングセンター＆",
+        "category": "商業施設",
+        "address": "北海道札幌市豊平区西岡3条3丁目4-1",
+        "hours": "1階食品売場/8:00～22:00\nその他の売場/9:00～21:00\n専門店街/10:00～21:00",
+        "note": "休憩スペース、イートイン、フードコート\nなどの椅子ベンチ（詳細は店舗にお問い合\nわせください） / 利用可能人数: 102人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.387299,
+          43.018963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0147",
+        "kind": "cool",
+        "name": "イオン札幌平岸店",
+        "category": "商業施設",
+        "address": "北海道札幌市豊平区平岸2条10丁目3-28",
+        "hours": "8:00～23:00",
+        "note": "サービスカウンター前休憩スペース\n（詳細は店舗にお問い合わせください） / 利用可能人数: 4人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.367508,
+          43.029812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0148",
+        "kind": "cool",
+        "name": "イオン南平岸店",
+        "category": "商業施設",
+        "address": "北海道札幌市豊平区平岸3条13丁目6-1",
+        "hours": "食品売場/7:00～25:00\n薬売場/9:00～22:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ４人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.370483,
+          43.026901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0149",
+        "kind": "cool",
+        "name": "マックスバリュエクスプレス中の島店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区中の島1条1丁目7-14",
+        "hours": "7:00～23:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ２人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.361008,
+          43.03791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0150",
+        "kind": "cool",
+        "name": "マックスバリュ月寒西店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区月寒中央通2丁目1番15号",
+        "hours": "9:00～21:45",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ３人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.392258,
+          43.036472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0151",
+        "kind": "cool",
+        "name": "フードセンター月寒中央店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区月寒中央通７丁目6-20",
+        "hours": "8:00～22:45",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: １人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.39711,
+          43.030136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0152",
+        "kind": "cool",
+        "name": "ザ・ビッグ豊平店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区豊平４条９丁目３－１",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: 24人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.375351,
+          43.04768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0153",
+        "kind": "cool",
+        "name": "ザ・ビッグエクスプレス平岸店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区平岸２条２丁目３－28",
+        "hours": "8:00～22:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: １人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.37001,
+          43.041115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0154",
+        "kind": "cool",
+        "name": "ザ・ビッグ西岡店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区西岡３条７丁目220",
+        "hours": "8:00～21:00",
+        "note": "休憩スペースの椅子ベンチ（詳細は店舗に\nお問い合わせください） / 利用可能人数: ６人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.385086,
+          43.010895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0155",
+        "kind": "cool",
+        "name": "ザ・ビッグ福住店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区福住1条3丁目10",
+        "hours": "8:00～21:00",
+        "note": "風除室内 / 利用可能人数: 1人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.399811,
+          43.017895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0156",
+        "kind": "cool",
+        "name": "コープさっぽろなかのしま店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区中の島1条4丁目7-20",
+        "hours": "9:00～21:50",
+        "note": "イートインコーナー / 利用可能人数: 10人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.358948,
+          43.032761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0157",
+        "kind": "cool",
+        "name": "コープさっぽろ美園店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区美園６条７丁目２",
+        "hours": "9:00～23:00",
+        "note": "イートインコーナー / 利用可能人数: 15人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.387878,
+          43.03709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0158",
+        "kind": "cool",
+        "name": "コープさっぽろ月寒ひがし店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区月寒東４条１１丁目３−１０\n月寒東ショッピングセンター内",
+        "hours": "9:00～21:00",
+        "note": "イートインコーナー / 利用可能人数: 15人 / 休館・休業日: 1/1・1/2 / トイレ前に1人用ソファが2台",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.413193,
+          43.030441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0159",
+        "kind": "cool",
+        "name": "ラッキー西岡店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区西岡３条１１丁目３番１６号",
+        "hours": "9:00～19:00",
+        "note": "1階休憩スペース / 利用可能人数: ３人 / 休館・休業日: 1/1・1/2",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.382034,
+          42.999939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0160",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス月寒東店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区月寒東３条８丁目１番３０号",
+        "hours": "9:00～23:00",
+        "note": "1階風除室及び２階風除室内 / 利用可能人数: 6-9人 / 休館・休業日: 元日 / 長椅子があります。",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.404892,
+          43.031212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0161",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス美園店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区美園２条１丁目２番１号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 32人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.383316,
+          43.045464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0162",
+        "kind": "cool",
+        "name": "ビッグハウスエクストラ",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区平岸１条２２丁目２番１５号",
+        "hours": "9:00～0:00",
+        "note": "イートイン / 利用可能人数: 40人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.357422,
+          43.014954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0163",
+        "kind": "cool",
+        "name": "ス－パ－ア－クス平岸店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区平岸５条８丁目１番１号",
+        "hours": "9:00～0:00",
+        "note": "出入口横 / 利用可能人数: ２人 / 休館・休業日: 元日",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.376801,
+          43.033997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0164",
+        "kind": "cool",
+        "name": "東光ストア 豊平店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区豊平6条9丁目1-18",
+        "hours": "9:00～23:00",
+        "note": "イートイン / 利用可能人数: 10～15人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.373413,
+          43.045853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0165",
+        "kind": "cool",
+        "name": "東光ストア 平岸ターミナル店",
+        "category": "スーパー",
+        "address": "北海道札幌市豊平区平岸2条7丁目4-35",
+        "hours": "9:00～22:00",
+        "note": "2階エスカレーター横 / 利用可能人数: 2～3人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.367599,
+          43.034798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0166",
+        "kind": "cool",
+        "name": "ツルハドラッグ 美園1条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市豊平区美園1条2丁目3番1号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ６人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.385727,
+          43.045834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0167",
+        "kind": "cool",
+        "name": "ツルハドラッグ 豊平5条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市豊平区豊平5条2丁目3番11号",
+        "hours": "9:00～23:00",
+        "note": "イートインスペース / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.366959,
+          43.052242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0168",
+        "kind": "cool",
+        "name": "ツルハドラッグ月寒東2条店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市豊平区月寒東2条18丁目163番12号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: ４人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.42009,
+          43.017147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0169",
+        "kind": "cool",
+        "name": "ツルハドラッグ平岸店",
+        "category": "ドラッグストア・薬局",
+        "address": "北海道札幌市豊平区平岸3条3丁目6番1号",
+        "hours": "9:00～22:00",
+        "note": "イートインスペース / 利用可能人数: 4人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.370911,
+          43.039703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0170",
+        "kind": "cool",
+        "name": "コーチャンフォーミュンヘン大橋店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市豊平区中の島１条１３丁目１番１号",
+        "hours": "9:00〜21:00",
+        "note": "文具コーナー、書籍コーナー\n（詳細は店舗にお問い合わせください） / 利用可能人数: 12人 / 休館・休業日: 年中無休",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.354721,
+          43.017857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0171",
+        "kind": "cool",
+        "name": "ケーズデンキ月寒店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市豊平区月寒東5条13丁目3-1",
+        "hours": "10:00～20:00",
+        "note": "1階エントランス / 利用可能人数: ５人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.41394,
+          43.031315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cool-shelter-0172",
+        "kind": "cool",
+        "name": "ケーズデンキ平岸店",
+        "category": "クーリングシェルター",
+        "address": "北海道札幌市札幌市豊平区平岸一条12丁目1番55号",
+        "hours": "10:00～20:00",
+        "note": "テレビコーナー / 利用可能人数: 3人 / 休館・休業日: 元旦",
+        "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+        "source_detail": "札幌市クーリングシェルター一覧 PDF (toyohiraku.pdf)",
+        "updated": "2026-07-10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.354401,
+          43.062077
+        ]
+      }
+    },
     {
       "type": "Feature",
       "properties": {
