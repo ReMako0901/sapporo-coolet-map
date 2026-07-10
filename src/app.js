@@ -1,7 +1,12 @@
 const SAPPORO_CENTER = [43.0618, 141.3545];
+const SAPPORO_BOUNDS = [
+  [42.78, 140.95],
+  [43.22, 141.66],
+];
 const DEFAULT_ZOOM = 15;
 const DATA_URL = "./data/spots.geojson";
 
+const mapEl = document.querySelector("#map");
 const statusEl = document.querySelector("#status");
 const locationDialog = document.querySelector("#location-dialog");
 const spotCount = document.querySelector("#spot-count");
@@ -57,9 +62,10 @@ async function requestLocation() {
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const coords = [position.coords.latitude, position.coords.longitude];
-      state.map.setView(coords, DEFAULT_ZOOM);
+      const mapCenter = clampToSapporo(coords);
+      state.map.setView(mapCenter, DEFAULT_ZOOM);
       updateUserLocation(coords, position.coords.accuracy);
-      setStatus("現在地を中心に地図を表示しました。");
+      setStatus(isInSapporo(coords) ? "現在地を中心に地図を表示しました。" : "札幌市外のため札幌中心部を表示しています。");
     },
     (error) => {
       const message =
@@ -81,21 +87,57 @@ function initializeMap(center) {
   state.map = L.map("map", {
     zoomControl: false,
     attributionControl: true,
+    maxBounds: SAPPORO_BOUNDS,
+    maxBoundsViscosity: 0.8,
+    minZoom: 10,
   }).setView(center, DEFAULT_ZOOM);
 
   L.control.zoom({
     position: "bottomright",
   }).addTo(state.map);
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
     maxZoom: 19,
     attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   }).addTo(state.map);
 
   state.spotsLayer = L.layerGroup().addTo(state.map);
   loadSpots();
-  setTimeout(() => state.map.invalidateSize(), 0);
+  refreshMapSize();
+  installMapResizeHandlers();
+}
+
+function refreshMapSize() {
+  requestAnimationFrame(() => {
+    state.map.invalidateSize({
+      animate: false,
+      pan: false,
+    });
+  });
+}
+
+function installMapResizeHandlers() {
+  if ("ResizeObserver" in window && mapEl) {
+    const observer = new ResizeObserver(refreshMapSize);
+    observer.observe(mapEl);
+  }
+
+  window.addEventListener("resize", refreshMapSize);
+  window.addEventListener("orientationchange", () => {
+    setTimeout(refreshMapSize, 250);
+  });
+}
+
+function isInSapporo(coords) {
+  const [lat, lng] = coords;
+  const [[south, west], [north, east]] = SAPPORO_BOUNDS;
+  return lat >= south && lat <= north && lng >= west && lng <= east;
+}
+
+function clampToSapporo(coords) {
+  if (isInSapporo(coords)) return coords;
+  return SAPPORO_CENTER;
 }
 
 function updateUserLocation(coords, accuracy) {
