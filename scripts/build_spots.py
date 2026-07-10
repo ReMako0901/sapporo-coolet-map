@@ -42,6 +42,16 @@ def normalize_key(*values: str) -> str:
     return text.lower()
 
 
+def normalize_sapporo_address(address: str) -> str:
+    address = clean_text(address).replace("\u3000", " ")
+    address = re.sub(r"\s+", "", address)
+    if address.startswith("北海道"):
+        return address
+    if address.startswith("札幌市"):
+        return "北海道" + address
+    return "北海道札幌市" + address
+
+
 def parse_flags(description: str) -> dict[str, str | bool]:
     text = clean_text(description)
     return {
@@ -271,7 +281,7 @@ def parse_cooling_shelters(existing_keys: set[str]) -> list[dict]:
                         if not name or not address:
                             continue
 
-                        address = "北海道札幌市" + address if not address.startswith("北海道") else address
+                        address = normalize_sapporo_address(address)
                         key = normalize_key(name, address)
                         if key in existing_keys:
                             continue

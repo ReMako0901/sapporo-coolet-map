@@ -5,6 +5,7 @@ const SAPPORO_BOUNDS = [
 ];
 const DEFAULT_ZOOM = 15;
 const DATA_URL = "./data/spots.geojson";
+const NEARBY_LIST_LIMIT = 20;
 
 const statusEl = document.querySelector("#status");
 const locationDialog = document.querySelector("#location-dialog");
@@ -40,7 +41,9 @@ setTimeout(openLocationDialog, 350);
 document.querySelector("#use-location").addEventListener("click", requestLocation);
 document.querySelector("#use-sapporo").addEventListener("click", () => {
   closeLocationDialog();
+  clearUserLocation();
   state.map.setView(SAPPORO_CENTER, DEFAULT_ZOOM);
+  renderSpots();
   setStatus("札幌中心部を表示しています。");
 });
 document.querySelector("#locate").addEventListener("click", openLocationDialog);
@@ -64,6 +67,7 @@ async function requestLocation() {
       const mapCenter = clampToSapporo(coords);
       state.map.setView(mapCenter, DEFAULT_ZOOM);
       updateUserLocation(coords, position.coords.accuracy);
+      renderSpots();
       setStatus(isInSapporo(coords) ? "現在地を中心に地図を表示しました。" : "札幌市外のため札幌中心部を表示しています。");
     },
     (error) => {
@@ -163,6 +167,20 @@ function updateUserLocation(coords, accuracy) {
   }
 }
 
+function clearUserLocation() {
+  state.userLatLng = null;
+
+  if (state.userMarker) {
+    state.userMarker.remove();
+    state.userMarker = null;
+  }
+
+  if (state.accuracyCircle) {
+    state.accuracyCircle.remove();
+    state.accuracyCircle = null;
+  }
+}
+
 function recenter() {
   if (state.userLatLng) {
     state.map.setView(state.userLatLng, DEFAULT_ZOOM);
@@ -228,6 +246,8 @@ function renderSpots() {
     if (kind === "toilet") return filterToilet.checked;
     return true;
   });
+  const reference = getReferenceLatLng();
+  const visibleItems = [];
 
   state.spotsLayer.clearLayers();
   spotsEl.replaceChildren();
@@ -243,13 +263,29 @@ function renderSpots() {
     }).bindPopup(makePopup(feature));
 
     marker.addTo(state.spotsLayer);
-    spotsEl.append(makeSpotItem(feature, coords, marker));
+    visibleItems.push({
+      feature,
+      coords,
+      marker,
+      distance: reference.distanceTo(coords),
+    });
   });
 
-  spotCount.textContent = `${visibleFeatures.length}件`;
+  const nearbyItems = visibleItems
+    .sort((a, b) => a.distance - b.distance)
+    .slice(0, NEARBY_LIST_LIMIT);
+
+  nearbyItems.forEach((item) => {
+    spotsEl.append(makeSpotItem(item.feature, item.coords, item.marker, item.distance));
+  });
+
+  spotCount.textContent =
+    visibleItems.length > nearbyItems.length
+      ? `${nearbyItems.length}/${visibleItems.length}件`
+      : `${visibleItems.length}件`;
 }
 
-function makeSpotItem(feature, coords, marker) {
+function makeSpotItem(feature, coords, marker, distance) {
   const item = document.createElement("li");
   item.className = "spot-card";
   item.dataset.kind = getKind(feature);
@@ -267,7 +303,7 @@ function makeSpotItem(feature, coords, marker) {
 
   const meta = document.createElement("span");
   meta.className = "spot-meta";
-  meta.textContent = formatMeta(feature);
+  meta.textContent = formatMeta(feature, distance);
 
   button.append(name, meta);
   item.append(button);
@@ -326,9 +362,23 @@ function getLatLng(feature) {
   return L.latLng(lat, lng);
 }
 
-function formatMeta(feature) {
+function getReferenceLatLng() {
+  if (state.userLatLng && isInSapporo([state.userLatLng.lat, state.userLatLng.lng])) {
+    return state.userLatLng;
+  }
+
+  return state.map?.getCenter() || L.latLng(SAPPORO_CENTER[0], SAPPORO_CENTER[1]);
+}
+
+function formatDistance(meters) {
+  if (!Number.isFinite(meters)) return "";
+  if (meters < 1000) return `約${Math.round(meters / 10) * 10}m`;
+  return `約${(meters / 1000).toFixed(meters < 10000 ? 1 : 0)}km`;
+}
+
+function formatMeta(feature, distance) {
   const props = feature.properties || {};
-  return [props.address, props.hours, props.note].filter(Boolean).join(" / ") || "詳細未設定";
+  return [formatDistance(distance), props.address, props.hours, props.note].filter(Boolean).join(" / ") || "詳細未設定";
 }
 
 function setStatus(message) {

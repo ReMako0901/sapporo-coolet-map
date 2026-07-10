@@ -778,7 +778,7 @@
         "kind": "cool",
         "name": "東区民センター",
         "category": "区民センター",
-        "address": "北海道札幌市東区北11条東7丁目（東区役所併\n設）",
+        "address": "北海道札幌市東区北11条東7丁目（東区役所併設）",
         "hours": "①9:00～21:00\n②9:00～17:00",
         "note": "①待合スペース\n②図書室 / 利用可能人数: ①10人\n②８人 / 休館・休業日: ①年末年始\n②毎月第４金曜日/蔵書一斉点検期\n間/年末年始 / ②読書をしながらお過ごしいただ\nけます。",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -1328,7 +1328,7 @@
         "kind": "cool",
         "name": "ツルハドラッグ 北6条店",
         "category": "ドラッグストア・薬局",
-        "address": "北海道札幌市東区北６条東３丁目1-1ダ・ヴィン\nチモール１階",
+        "address": "北海道札幌市東区北６条東３丁目1-1ダ・ヴィンチモール１階",
         "hours": "8:00～23:00",
         "note": "イートインスペース / 利用可能人数: 16人 / 休館・休業日: 元旦",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -1460,7 +1460,7 @@
         "kind": "cool",
         "name": "元町調剤薬局",
         "category": "ドラッグストア・薬局",
-        "address": "北海道札幌市東区北21条東16丁目1番11号 110松\n井ビル1階",
+        "address": "北海道札幌市東区北21条東16丁目1番11号110松井ビル1階",
         "hours": "月〜水･金/9:00〜18:00\n木/9:00〜17:00\n土/9:00〜13:00",
         "note": "待合室スペース / 利用可能人数: ２人 / 休館・休業日: 日曜・祝日",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -1548,7 +1548,7 @@
         "kind": "cool",
         "name": "えほん図書館",
         "category": "図書館",
-        "address": "北海道札幌市白石区南郷通1丁目南8-1\n白石区複合庁舎6階",
+        "address": "北海道札幌市白石区南郷通1丁目南8-1白石区複合庁舎6階",
         "hours": "月～日/9:00～17:00",
         "note": "閲覧スペース / 利用可能人数: 約50人 / 休館・休業日: 図書整理日（毎月第4金曜日）\n蔵書一斉点検期間\n年末年始（12月29日～1月3日） / ・館内で読書をしながらお過ごし\nいただけます。",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -1746,7 +1746,7 @@
         "kind": "cool",
         "name": "コープさっぽろルーシー店",
         "category": "スーパー",
-        "address": "北海道札幌市白石区 栄通１８丁目５−３５",
+        "address": "北海道札幌市白石区栄通１８丁目５−３５",
         "hours": "9:00～22:00",
         "note": "イートインコーナー\n２階エスカレーター横 など（詳細は店舗\nにお問い合わせください） / 利用可能人数: 58人 / 休館・休業日: 1/1・1/2 / １F／２F併せて",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -1756,8 +1756,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          141.396408,
-          43.045555
+          141.43457,
+          43.028027
         ]
       }
     },
@@ -1922,7 +1922,7 @@
         "kind": "cool",
         "name": "札幌市エレクトロニクスセンター\n※冷房設備稼働時期の関係で６月３日以\n降のご利用となります",
         "category": "公共・文化施設",
-        "address": "北海道札幌市厚別区下野幌テクノパーク1丁目1-\n10",
+        "address": "北海道札幌市厚別区下野幌テクノパーク1丁目1-10",
         "hours": "9:00～21:00",
         "note": "多目的ホール（１階） / 利用可能人数: 60人程度 / 休館・休業日: 日曜日・祝日、年末年始（12月29\n日～１月３日） / ・平日の昼食時間帯（12～13時）\nは、入居及び立地企業の社員等で\n相当数の座席を使用することか\nら、当該時間帯の受け入れが難し\nい可能性があります。\n・駐車場を利用される場合は、所\n定の駐車料金がかかります。",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -1932,8 +1932,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          141.503281,
-          43.032234
+          141.502991,
+          43.031673
         ]
       }
     },
@@ -2164,7 +2164,7 @@
         "kind": "cool",
         "name": "清田図書館",
         "category": "図書館",
-        "address": "北海道札幌市清田区平岡1条1丁目2-1清田区総合\n庁舎4階",
+        "address": "北海道札幌市清田区平岡1条1丁目2-1清田区総合庁舎4階",
         "hours": "火～木/9:15～19:00\n金～月・祝/9:15～17:00",
         "note": "図書室\n読書室 / 利用可能人数: 86人 / 休館・休業日: ・施設点検日（毎月第2水曜日）\n・図書整理日（毎月第4水曜日）\n・蔵書一斉点検期間\n・年末年始（12月29日～1月3日） / ・静かな館内で読書をしながらお\n過ごしいただけます。",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -2692,7 +2692,7 @@
         "kind": "cool",
         "name": "ス－パ－ア－クス宮の沢店",
         "category": "スーパー",
-        "address": "北海道札幌市手稲区西宮の沢５条２丁目１１番２\n０号",
+        "address": "北海道札幌市手稲区西宮の沢５条２丁目１１番２０号",
         "hours": "9:00～23:00",
         "note": "イートイン / 利用可能人数: 12人 / 休館・休業日: 元日",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -2702,8 +2702,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          141.260117,
-          43.095425
+          141.258865,
+          43.096451
         ]
       }
     },
@@ -3484,7 +3484,7 @@
         "kind": "cool",
         "name": "コープさっぽろ月寒ひがし店",
         "category": "スーパー",
-        "address": "北海道札幌市豊平区月寒東４条１１丁目３−１０\n月寒東ショッピングセンター内",
+        "address": "北海道札幌市豊平区月寒東４条１１丁目３−１０月寒東ショッピングセンター内",
         "hours": "9:00～21:00",
         "note": "イートインコーナー / 利用可能人数: 15人 / 休館・休業日: 1/1・1/2 / トイレ前に1人用ソファが2台",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -3792,7 +3792,7 @@
         "kind": "cool",
         "name": "ケーズデンキ平岸店",
         "category": "クーリングシェルター",
-        "address": "北海道札幌市札幌市豊平区平岸一条12丁目1番55号",
+        "address": "北海道札幌市豊平区平岸一条12丁目1番55号",
         "hours": "10:00～20:00",
         "note": "テレビコーナー / 利用可能人数: 3人 / 休館・休業日: 元旦",
         "source": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
@@ -3802,8 +3802,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          141.354401,
-          43.062077
+          141.363037,
+          43.027431
         ]
       }
     },
