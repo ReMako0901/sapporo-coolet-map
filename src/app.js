@@ -84,12 +84,20 @@ async function requestLocation() {
 }
 
 function initializeMap(center) {
+  syncMapBoxSize();
+
   state.map = L.map("map", {
     zoomControl: false,
     attributionControl: true,
+    bounceAtZoomLimits: false,
+    doubleClickZoom: true,
+    dragging: true,
     maxBounds: SAPPORO_BOUNDS,
     maxBoundsViscosity: 0.8,
     minZoom: 10,
+    scrollWheelZoom: false,
+    tap: false,
+    touchZoom: "center",
   }).setView(center, DEFAULT_ZOOM);
 
   L.control.zoom({
@@ -109,12 +117,27 @@ function initializeMap(center) {
 }
 
 function refreshMapSize() {
+  syncMapBoxSize();
+
   requestAnimationFrame(() => {
     state.map.invalidateSize({
       animate: false,
       pan: false,
     });
   });
+}
+
+function syncMapBoxSize() {
+  if (!mapEl) return;
+
+  mapEl.style.height = "";
+  const width = Math.floor(mapEl.getBoundingClientRect().width);
+  if (!width) return;
+
+  const headerReserve = window.innerWidth >= 720 ? 96 : 260;
+  const maxByHeight = Math.max(240, Math.floor(window.innerHeight - headerReserve));
+  const size = Math.min(width, maxByHeight, 520);
+  mapEl.style.height = `${size}px`;
 }
 
 function installMapResizeHandlers() {

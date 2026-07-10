@@ -27,6 +27,8 @@ body {
   overflow: hidden;
   background: var(--bg);
   color: var(--ink);
+  overscroll-behavior: none;
+  touch-action: manipulation;
   font-family:
     system-ui,
     -apple-system,
@@ -161,13 +163,24 @@ h2 {
 
 .map {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: min(calc(100vw - 24px), 520px);
   min-height: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
   background: #dce8e4;
   box-shadow: var(--shadow);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #dce8e4;
+  touch-action: none;
 }
 
 .spot-panel {
@@ -351,6 +364,7 @@ h2 {
 
   .map {
     align-self: start;
+    height: min(520px, calc(100dvh - 92px));
   }
 
   .spot-panel {
@@ -371,6 +385,7 @@ h2 {
 
   .map {
     width: min(100%, 48dvh);
+    height: min(100%, 48dvh);
     margin: 0 auto;
   }
 
