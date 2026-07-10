@@ -1,8 +1,26 @@
 {
   "name": "札幌クールスポットマップ MVP",
   "updated": "2026-07-10",
+  "feature_count": {
+    "cool": 53,
+    "toilet": 907,
+    "total": 960
+  },
   "sources": [
-    "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
-    "https://www.city.sapporo.jp/ryokuka/top/koueniji/benjoichiran.html"
+    {
+      "name": "札幌市公共施設一覧",
+      "url": "https://ckan.pf-sapporo.jp/dataset/public_facility",
+      "usage": "図書館、区民センター、地区センターなどの涼める公共施設を抽出"
+    },
+    {
+      "name": "札幌市公園トイレマップ",
+      "url": "https://www.city.sapporo.jp/ryokuka/top/koueniji/benjoichiran.html",
+      "usage": "公園トイレの名称、座標、冬期開放、車いす対応情報を抽出"
+    },
+    {
+      "name": "札幌市クーリングシェルター一覧",
+      "url": "https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html",
+      "usage": "次段階で照合する参考資料としてPDF全区分を保存"
+    }
   ]
 }
