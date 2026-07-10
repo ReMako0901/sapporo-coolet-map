@@ -163,7 +163,7 @@ h2 {
 .map {
   width: 100%;
   aspect-ratio: 1 / 1;
-  height: auto;
+  height: auto !important;
   min-height: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -175,9 +175,9 @@ h2 {
   -webkit-touch-callout: none;
 }
 
-.leaflet-container {
-  width: 100%;
-  height: 100%;
+.map.leaflet-container {
+  aspect-ratio: 1 / 1;
+  height: auto !important;
   background: #dce8e4;
 }
 
