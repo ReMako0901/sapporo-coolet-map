@@ -345,7 +345,7 @@ def main() -> None:
     collection = {
         "type": "FeatureCollection",
         "metadata": {
-            "title": "札幌クールスポット・トイレデータ",
+            "title": "札幌クーレットマップ データ",
             "updated": str(date.today()),
             "description": "札幌市公開情報をもとにしたアプリ用GeoJSON。涼める公共施設と公園トイレを座標付きで収録。",
             "sources": [

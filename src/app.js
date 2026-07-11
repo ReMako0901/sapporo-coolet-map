@@ -9,6 +9,7 @@ const NEARBY_LIST_LIMIT = 20;
 
 const statusEl = document.querySelector("#status");
 const locationDialog = document.querySelector("#location-dialog");
+const reloadButton = document.querySelector("#reload-spots");
 const spotCount = document.querySelector("#spot-count");
 const spotsEl = document.querySelector("#spots");
 const dataNote = document.querySelector("#data-note");
@@ -47,7 +48,7 @@ document.querySelector("#use-sapporo").addEventListener("click", () => {
   setStatus("札幌中心部を表示しています。");
 });
 document.querySelector("#locate").addEventListener("click", openLocationDialog);
-document.querySelector("#reload-spots").addEventListener("click", loadSpots);
+reloadButton.addEventListener("click", loadSpots);
 filterCool.addEventListener("change", renderSpots);
 filterToilet.addEventListener("change", renderSpots);
 
@@ -217,7 +218,9 @@ async function loadSpots() {
   if (!state.spotsLayer) return;
 
   try {
+    setReloading(true);
     setDataNote("施設データを読み込んでいます。");
+    setStatus("施設データを再読込しています。");
     const response = await fetch(`${DATA_URL}?v=${Date.now()}`, {
       cache: "no-store",
     });
@@ -231,11 +234,15 @@ async function loadSpots() {
     setDataNote(
       `出典: data/spots.geojson / 最終読込: ${new Date().toLocaleString("ja-JP")}`,
     );
+    setStatus("施設データを再読込しました。");
   } catch (error) {
     state.features = [];
     renderSpots();
     setDataNote("施設データを読み込めませんでした。data/spots.geojson を確認してください。");
+    setStatus("施設データの再読込に失敗しました。");
     console.error(error);
+  } finally {
+    setReloading(false);
   }
 }
 
@@ -387,6 +394,12 @@ function setStatus(message) {
 
 function setDataNote(message) {
   dataNote.textContent = message;
+}
+
+function setReloading(isReloading) {
+  if (!reloadButton) return;
+  reloadButton.disabled = isReloading;
+  reloadButton.textContent = isReloading ? "読込中" : "更新";
 }
 
 function escapeHtml(value) {
