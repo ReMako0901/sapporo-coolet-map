@@ -24,10 +24,11 @@ body {
 
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--bg);
   color: var(--ink);
-  overscroll-behavior: none;
+  overscroll-behavior-x: none;
   font-family:
     system-ui,
     -apple-system,
@@ -52,10 +53,10 @@ button {
 
 .map-panel {
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
   gap: 10px;
   width: min(100%, 520px);
-  height: 100dvh;
+  min-height: 100dvh;
   margin: 0 auto;
   padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
 }
@@ -158,8 +159,7 @@ h2 {
 
 .map-layout {
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-  gap: 8px;
+  gap: 10px;
   min-height: 0;
 }
 
@@ -192,7 +192,7 @@ h2 {
 
 .spot-panel {
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto auto auto;
   gap: 8px;
   min-height: 0;
   padding: 10px;
@@ -240,8 +240,7 @@ h2 {
   margin: 0;
   padding: 0;
   list-style: none;
-  overflow: auto;
-  overscroll-behavior: contain;
+  overflow: visible;
 }
 
 .spot-card {
@@ -278,7 +277,7 @@ h2 {
 
 .spot-meta,
 .note,
-.source-note {
+.source-panel {
   color: var(--muted);
   font-size: 0.74rem;
   line-height: 1.35;
@@ -298,12 +297,37 @@ h2 {
   white-space: nowrap;
 }
 
-.source-note {
-  margin-bottom: 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+.content-column {
+  display: grid;
+  gap: 10px;
+  min-height: 0;
+}
+
+.source-panel {
+  padding: 2px 4px 20px;
+}
+
+.source-panel h2 {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.source-panel p {
+  margin-bottom: 8px;
+}
+
+.source-panel ul {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.source-panel a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .leaflet-control-attribution {
@@ -368,13 +392,12 @@ h2 {
 @media (min-width: 720px) {
   .map-panel {
     width: min(100%, 980px);
-    grid-template-rows: auto auto minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
   }
 
   .map-layout {
     display: grid;
     grid-template-columns: minmax(360px, 520px) minmax(260px, 1fr);
-    grid-template-rows: 1fr;
     gap: 12px;
     min-height: 0;
   }
@@ -385,10 +408,6 @@ h2 {
 
   .map {
     max-height: min(520px, calc(100dvh - 92px));
-  }
-
-  .spot-panel {
-    height: min(520px, calc(100dvh - 92px));
   }
 }
 
@@ -409,16 +428,7 @@ h2 {
     margin: 0 auto;
   }
 
-  .source-note {
-    font-size: 0.68rem;
-    -webkit-line-clamp: 1;
-  }
-
   .spot-panel {
     padding: 8px;
-  }
-
-  .note {
-    display: none;
   }
 }

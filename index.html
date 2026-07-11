@@ -8,7 +8,7 @@
     />
     <title>札幌クーレットマップ</title>
     <link rel="stylesheet" href="./vendor/leaflet/leaflet.css?v=20260710-7" />
-    <link rel="stylesheet" href="./src/style.css?v=20260711-2" />
+    <link rel="stylesheet" href="./src/style.css?v=20260711-3" />
   </head>
   <body>
     <main class="app-shell">
@@ -30,30 +30,44 @@
         <div class="map-layout">
           <div class="map-column">
             <div id="map" class="map" aria-label="現在地周辺の地図"></div>
-            <p class="source-note">
-              採用データ: 札幌市クーリングシェルター一覧、札幌市公共施設一覧、札幌市公園トイレマップ。住所のみの施設は国土地理院住所検索を使って座標化。
-            </p>
           </div>
-          <aside class="spot-panel" aria-labelledby="spots-title">
-            <div class="spot-list-header">
-              <h2 id="spots-title">近くの候補</h2>
-              <span id="spot-count">0件</span>
-            </div>
-            <div class="filter-row" aria-label="表示する施設">
-              <label>
-                <input type="checkbox" id="filter-cool" checked />
-                涼める場所
-              </label>
-              <label>
-                <input type="checkbox" id="filter-toilet" checked />
-                トイレ
-              </label>
-            </div>
-            <ol id="spots" class="spots"></ol>
-            <p class="note" id="data-note">
-              施設データを読み込んでいます。
-            </p>
-          </aside>
+          <div class="content-column">
+            <aside class="spot-panel" aria-labelledby="spots-title">
+              <div class="spot-list-header">
+                <h2 id="spots-title">近くの候補</h2>
+                <span id="spot-count">0件</span>
+              </div>
+              <div class="filter-row" aria-label="表示する施設">
+                <label>
+                  <input type="checkbox" id="filter-cool" checked />
+                  涼める場所
+                </label>
+                <label>
+                  <input type="checkbox" id="filter-toilet" checked />
+                  トイレ
+                </label>
+              </div>
+              <ol id="spots" class="spots"></ol>
+              <p class="note" id="data-note">
+                施設データを読み込んでいます。
+              </p>
+            </aside>
+
+            <section class="source-panel" aria-labelledby="source-title">
+              <h2 id="source-title">採用データ</h2>
+              <p>
+                涼める場所は札幌市のクーリングシェルター一覧を中心に、図書館・区民センター・地区センターなど無料で滞在しやすい公共施設を札幌市公共施設一覧で補完しています。
+              </p>
+              <p>
+                トイレは札幌市公園トイレマップを採用し、名称・座標・冬期開放・車いす対応の情報を表示しています。住所だけの施設は国土地理院住所検索で座標化しています。
+              </p>
+              <ul>
+                <li><a href="https://www.city.sapporo.jp/kankyo/ondanka/hyperthermia/shelter.html" target="_blank" rel="noreferrer">札幌市クーリングシェルター一覧</a></li>
+                <li><a href="https://ckan.pf-sapporo.jp/dataset/public_facility" target="_blank" rel="noreferrer">札幌市公共施設一覧</a></li>
+                <li><a href="https://www.city.sapporo.jp/ryokuka/top/koueniji/benjoichiran.html" target="_blank" rel="noreferrer">札幌市公園トイレマップ</a></li>
+              </ul>
+            </section>
+          </div>
         </div>
       </section>
 
@@ -77,6 +91,6 @@
     </main>
 
     <script src="./vendor/leaflet/leaflet.js?v=20260710-7"></script>
-    <script src="./src/app.js?v=20260711-2" type="module"></script>
+    <script src="./src/app.js?v=20260711-3" type="module"></script>
   </body>
 </html>

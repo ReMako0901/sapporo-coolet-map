@@ -5,7 +5,7 @@ const SAPPORO_BOUNDS = [
 ];
 const DEFAULT_ZOOM = 15;
 const DATA_URL = "./data/spots.geojson";
-const NEARBY_LIST_LIMIT = 20;
+const NEARBY_LIST_LIMIT = 30;
 
 const statusEl = document.querySelector("#status");
 const locationDialog = document.querySelector("#location-dialog");
