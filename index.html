@@ -8,7 +8,7 @@
     />
     <title>札幌クーレットマップ</title>
     <link rel="stylesheet" href="./vendor/leaflet/leaflet.css?v=20260710-7" />
-    <link rel="stylesheet" href="./src/style.css?v=20260711-1" />
+    <link rel="stylesheet" href="./src/style.css?v=20260711-2" />
   </head>
   <body>
     <main class="app-shell">
@@ -28,7 +28,12 @@
         <p class="status" id="status" role="status">札幌中心部を表示しています。</p>
 
         <div class="map-layout">
-          <div id="map" class="map" aria-label="現在地周辺の地図"></div>
+          <div class="map-column">
+            <div id="map" class="map" aria-label="現在地周辺の地図"></div>
+            <p class="source-note">
+              採用データ: 札幌市クーリングシェルター一覧、札幌市公共施設一覧、札幌市公園トイレマップ。住所のみの施設は国土地理院住所検索を使って座標化。
+            </p>
+          </div>
           <aside class="spot-panel" aria-labelledby="spots-title">
             <div class="spot-list-header">
               <h2 id="spots-title">近くの候補</h2>

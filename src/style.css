@@ -52,7 +52,7 @@ button {
 
 .map-panel {
   display: grid;
-  grid-template-rows: auto auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 10px;
   width: min(100%, 520px);
   height: 100dvh;
@@ -157,7 +157,16 @@ h2 {
 }
 
 .map-layout {
-  display: contents;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 8px;
+  min-height: 0;
+}
+
+.map-column {
+  display: grid;
+  gap: 6px;
+  min-height: 0;
 }
 
 .map {
@@ -268,7 +277,8 @@ h2 {
 }
 
 .spot-meta,
-.note {
+.note,
+.source-note {
   color: var(--muted);
   font-size: 0.74rem;
   line-height: 1.35;
@@ -286,6 +296,14 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.source-note {
+  margin-bottom: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .leaflet-control-attribution {
@@ -356,12 +374,16 @@ h2 {
   .map-layout {
     display: grid;
     grid-template-columns: minmax(360px, 520px) minmax(260px, 1fr);
+    grid-template-rows: 1fr;
     gap: 12px;
     min-height: 0;
   }
 
-  .map {
+  .map-column {
     align-self: start;
+  }
+
+  .map {
     max-height: min(520px, calc(100dvh - 92px));
   }
 
@@ -385,6 +407,11 @@ h2 {
     width: min(100%, 48dvh);
     height: auto;
     margin: 0 auto;
+  }
+
+  .source-note {
+    font-size: 0.68rem;
+    -webkit-line-clamp: 1;
   }
 
   .spot-panel {
