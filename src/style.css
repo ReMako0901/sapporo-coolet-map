@@ -75,11 +75,33 @@ button {
 
 .app-header > div:first-child {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  top: 0;
+  left: 50%;
+  width: min(208px, calc(var(--map-size) - 128px));
+  min-height: 40px;
+  padding: 6px 10px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  border: 1px solid rgba(214, 224, 218, 0.9);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 20px rgba(22, 43, 36, 0.16);
+  transform: translateX(-50%);
   white-space: nowrap;
+}
+
+.app-header .eyebrow {
+  margin-bottom: 1px;
+  overflow: hidden;
+  font-size: 0.5rem;
+  line-height: 1;
+  text-overflow: ellipsis;
+}
+
+.app-header h1 {
+  overflow: hidden;
+  font-size: 0.98rem;
+  line-height: 1.05;
+  text-overflow: ellipsis;
 }
 
 .header-actions {
@@ -456,9 +478,26 @@ h2 {
     position: static;
     width: auto;
     height: auto;
+    min-height: 0;
+    padding: 0;
     overflow: visible;
-    clip: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
     white-space: normal;
+  }
+
+  .app-header .eyebrow {
+    margin-bottom: 3px;
+    font-size: 0.68rem;
+    line-height: normal;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+    line-height: 1.1;
   }
 
   .header-actions {
