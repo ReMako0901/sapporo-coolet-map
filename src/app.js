@@ -6,6 +6,12 @@ const SAPPORO_BOUNDS = [
 const DEFAULT_ZOOM = 15;
 const DATA_URL = "./data/spots.geojson";
 const NEARBY_LIST_LIMIT = 30;
+const MARKER_BUDGETS = [
+  { maxZoom: 11, total: 90, cool: 60, toilet: 30 },
+  { maxZoom: 12, total: 160, cool: 95, toilet: 65 },
+  { maxZoom: 13, total: 280, cool: 150, toilet: 130 },
+  { maxZoom: 14, total: 480, cool: 240, toilet: 240 },
+];
 const TRACKPAD_ZOOM_SENSITIVITY = 0.012;
 const TRACKPAD_PAN_MAX_DELTA = 160;
 
@@ -25,9 +31,11 @@ const state = {
   spotsLayer: null,
   features: [],
   renderTimer: null,
+  markerTimer: null,
   lastGestureScale: 1,
   gestureStartedOnMap: false,
   visibleItems: [],
+  markerByKey: new Map(),
 };
 
 const iconConfig = {
@@ -113,7 +121,7 @@ function initializeMap(center) {
   loadSpots();
   installMapResizeHandlers();
   installTrackpadMapHandlers();
-  state.map.on("moveend", scheduleMapCenterListUpdate);
+  state.map.on("moveend zoomend", scheduleMapViewUpdate);
   refreshMapSize();
 }
 
@@ -273,11 +281,14 @@ function debugLog(line) {
   debugPanel.textContent = debugLines.join("\n");
 }
 
-function scheduleMapCenterListUpdate() {
-  if (state.userLatLng) return;
+function scheduleMapViewUpdate() {
+  window.clearTimeout(state.markerTimer);
+  state.markerTimer = window.setTimeout(renderMarkers, 120);
 
-  window.clearTimeout(state.renderTimer);
-  state.renderTimer = window.setTimeout(renderNearbyList, 180);
+  if (!state.userLatLng) {
+    window.clearTimeout(state.renderTimer);
+    state.renderTimer = window.setTimeout(renderNearbyList, 180);
+  }
 }
 
 function isInSapporo(coords) {
@@ -392,36 +403,29 @@ async function loadSpots() {
 }
 
 function renderSpots() {
+  buildVisibleItems();
   renderMarkers();
   renderNearbyList();
 }
 
 function renderMarkers() {
-  const visibleFeatures = state.features.filter((feature) => {
-    const kind = getKind(feature);
-    if (kind === "cool") return filterCool.checked;
-    if (kind === "toilet") return filterToilet.checked;
-    return true;
-  });
-
+  const markerItems = selectMarkerItems(state.visibleItems);
   state.spotsLayer.clearLayers();
-  state.visibleItems = [];
+  state.markerByKey = new Map();
 
-  visibleFeatures.forEach((feature) => {
-    const coords = getLatLng(feature);
-    if (!coords) return;
-
-    const marker = L.marker(coords, {
-      icon: makeIcon(getKind(feature)),
-      title: feature.properties?.name || "名称未設定",
-    }).bindPopup(makePopup(feature));
-
+  markerItems.forEach((item) => {
+    const marker = createSpotMarker(item.feature, item.coords);
     marker.addTo(state.spotsLayer);
-    state.visibleItems.push({ feature, coords, marker });
+    state.markerByKey.set(item.key, marker);
   });
+  debugLog(`markers ${markerItems.length}/${state.visibleItems.length} z=${state.map.getZoom().toFixed(1)}`);
 }
 
 function renderNearbyList() {
+  if (!state.visibleItems.length) {
+    buildVisibleItems();
+  }
+
   const reference = getReferenceLatLng();
   const nearbyItems = state.visibleItems
     .map((item) => ({ ...item, distance: reference.distanceTo(item.coords) }))
@@ -430,7 +434,7 @@ function renderNearbyList() {
 
   spotsEl.replaceChildren();
   nearbyItems.forEach((item) => {
-    spotsEl.append(makeSpotItem(item.feature, item.coords, item.marker, item.distance));
+    spotsEl.append(makeSpotItem(item.feature, item.coords, item.key, item.distance));
   });
 
   spotCount.textContent =
@@ -439,7 +443,62 @@ function renderNearbyList() {
       : `${state.visibleItems.length}件`;
 }
 
-function makeSpotItem(feature, coords, marker, distance) {
+function buildVisibleItems() {
+  state.visibleItems = [];
+
+  state.features.forEach((feature, index) => {
+    const kind = getKind(feature);
+    if (kind === "cool" && !filterCool.checked) return;
+    if (kind === "toilet" && !filterToilet.checked) return;
+
+    const coords = getLatLng(feature);
+    if (!coords) return;
+
+    state.visibleItems.push({
+      feature,
+      coords,
+      key: getFeatureKey(feature, coords, index),
+    });
+  });
+}
+
+function selectMarkerItems(items) {
+  const budget = getMarkerBudget();
+  const bounds = state.map.getBounds().pad(0.15);
+  const center = state.map.getCenter();
+  const inView = items
+    .filter((item) => bounds.contains(item.coords))
+    .map((item) => ({
+      ...item,
+      centerDistance: center.distanceTo(item.coords),
+    }));
+
+  if (inView.length <= budget.total) return inView;
+
+  const coolItems = inView
+    .filter((item) => getKind(item.feature) === "cool")
+    .sort((a, b) => a.centerDistance - b.centerDistance)
+    .slice(0, budget.cool);
+  const toiletItems = inView
+    .filter((item) => getKind(item.feature) === "toilet")
+    .sort((a, b) => a.centerDistance - b.centerDistance)
+    .slice(0, budget.toilet);
+
+  return [...coolItems, ...toiletItems]
+    .sort((a, b) => a.centerDistance - b.centerDistance)
+    .slice(0, budget.total);
+}
+
+function getMarkerBudget() {
+  const zoom = state.map.getZoom();
+  return MARKER_BUDGETS.find((budget) => zoom < budget.maxZoom) || {
+    total: Number.POSITIVE_INFINITY,
+    cool: Number.POSITIVE_INFINITY,
+    toilet: Number.POSITIVE_INFINITY,
+  };
+}
+
+function makeSpotItem(feature, coords, key, distance) {
   const item = document.createElement("li");
   item.className = "spot-card";
   item.dataset.kind = getKind(feature);
@@ -448,7 +507,11 @@ function makeSpotItem(feature, coords, marker, distance) {
   button.type = "button";
   button.addEventListener("click", () => {
     state.map.setView(coords, 17);
-    marker.openPopup();
+    window.setTimeout(() => {
+      const marker = state.markerByKey.get(key) || createSpotMarker(feature, coords).addTo(state.spotsLayer);
+      state.markerByKey.set(key, marker);
+      marker.openPopup();
+    }, 0);
   });
 
   const name = document.createElement("span");
@@ -462,6 +525,13 @@ function makeSpotItem(feature, coords, marker, distance) {
   button.append(name, meta);
   item.append(button);
   return item;
+}
+
+function createSpotMarker(feature, coords) {
+  return L.marker(coords, {
+    icon: makeIcon(getKind(feature)),
+    title: feature.properties?.name || "名称未設定",
+  }).bindPopup(makePopup(feature));
 }
 
 function makePopup(feature) {
@@ -514,6 +584,17 @@ function getLatLng(feature) {
   const [lng, lat] = coordinates;
   if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
   return L.latLng(lat, lng);
+}
+
+function getFeatureKey(feature, coords, index) {
+  const props = feature.properties || {};
+  return [
+    index,
+    getKind(feature),
+    props.name || "",
+    coords.lat.toFixed(6),
+    coords.lng.toFixed(6),
+  ].join("|");
 }
 
 function getReferenceLatLng() {
