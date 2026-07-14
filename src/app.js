@@ -27,6 +27,7 @@ const state = {
   renderTimer: null,
   lastGestureScale: 1,
   gestureStartedOnMap: false,
+  visibleItems: [],
 };
 
 const iconConfig = {
@@ -48,7 +49,7 @@ document.querySelector("#use-sapporo").addEventListener("click", () => {
   closeLocationDialog();
   clearUserLocation();
   state.map.setView(SAPPORO_CENTER, DEFAULT_ZOOM);
-  renderSpots();
+  renderNearbyList();
   setStatus("札幌中心部を表示しています。");
 });
 document.querySelector("#locate").addEventListener("click", openLocationDialog);
@@ -71,7 +72,7 @@ async function requestLocation() {
       const mapCenter = clampToSapporo(coords);
       state.map.setView(mapCenter, DEFAULT_ZOOM);
       updateUserLocation(coords, position.coords.accuracy);
-      renderSpots();
+      renderNearbyList();
       setStatus(isInSapporo(coords) ? "現在地を中心に地図を表示しました。" : "札幌市外のため札幌中心部を表示しています。");
     },
     (error) => {
@@ -97,7 +98,7 @@ function initializeMap(center) {
     minZoom: 10,
     maxZoom: 19,
     scrollWheelZoom: false,
-    zoomSnap: 0.25,
+    zoomSnap: 0,
     zoomDelta: 0.5,
   }).setView(center, DEFAULT_ZOOM);
 
@@ -140,22 +141,6 @@ function installMapResizeHandlers() {
 function installTrackpadMapHandlers() {
   const container = state.map.getContainer();
 
-  window.addEventListener("wheel", handleMapWheel, {
-    capture: true,
-    passive: false,
-  });
-  window.addEventListener("gesturestart", handleGestureStart, {
-    capture: true,
-    passive: false,
-  });
-  window.addEventListener("gesturechange", handleGestureChange, {
-    capture: true,
-    passive: false,
-  });
-  window.addEventListener("gestureend", handleGestureEnd, {
-    capture: true,
-    passive: false,
-  });
   container.addEventListener("wheel", handleMapWheel, {
     passive: false,
   });
@@ -172,11 +157,14 @@ function installTrackpadMapHandlers() {
 
 function handleMapWheel(event) {
   if (event.target instanceof Element && event.target.closest(".leaflet-control")) return;
-  if (!isMapPointEvent(event)) return;
 
   event.preventDefault();
   event.stopPropagation();
-  event.stopImmediatePropagation();
+  debugLog(`wheel dx=${Math.round(event.deltaX)} dy=${Math.round(event.deltaY)} ctrl=${event.ctrlKey}`);
+
+  // Safariはピンチ中にgesturechangeとctrl+wheelの両方を発火しうるため、
+  // gesture側で処理中はwheel側のズームを止めて二重適用を防ぐ
+  if (state.gestureStartedOnMap) return;
 
   if (event.ctrlKey || event.metaKey) {
     const zoomDelta = clamp(
@@ -200,12 +188,11 @@ function handleMapWheel(event) {
 }
 
 function handleGestureStart(event) {
-  state.gestureStartedOnMap = isMapPointEvent(event);
-  if (!state.gestureStartedOnMap) return;
-
+  state.gestureStartedOnMap = true;
   event.preventDefault();
   event.stopPropagation();
   state.lastGestureScale = event.scale || 1;
+  debugLog(`gesturestart scale=${(event.scale || 1).toFixed(3)}`);
 }
 
 function handleGestureChange(event) {
@@ -217,6 +204,7 @@ function handleGestureChange(event) {
   const nextScale = event.scale || 1;
   const zoomDelta = clamp(Math.log2(nextScale / state.lastGestureScale), -0.5, 0.5);
   state.lastGestureScale = nextScale;
+  debugLog(`gesturechange scale=${nextScale.toFixed(3)}`);
   zoomMapAroundPointer(event, zoomDelta);
 }
 
@@ -227,24 +215,11 @@ function handleGestureEnd(event) {
   event.stopPropagation();
   state.gestureStartedOnMap = false;
   state.lastGestureScale = 1;
-}
-
-function isMapPointEvent(event) {
-  if (!Number.isFinite(event.clientX) || !Number.isFinite(event.clientY)) {
-    return event.target instanceof Element && Boolean(event.target.closest("#map"));
-  }
-
-  const rect = state.map.getContainer().getBoundingClientRect();
-  return (
-    event.clientX >= rect.left &&
-    event.clientX <= rect.right &&
-    event.clientY >= rect.top &&
-    event.clientY <= rect.bottom
-  );
+  debugLog("gestureend");
 }
 
 function zoomMapAroundPointer(event, zoomDelta) {
-  if (!Number.isFinite(zoomDelta) || Math.abs(zoomDelta) < 0.01) return;
+  if (!Number.isFinite(zoomDelta) || zoomDelta === 0) return;
 
   const nextZoom = clamp(
     state.map.getZoom() + zoomDelta,
@@ -254,6 +229,7 @@ function zoomMapAroundPointer(event, zoomDelta) {
   state.map.setZoomAround(getEventContainerPoint(event), nextZoom, {
     animate: false,
   });
+  debugLog(`zoom -> ${state.map.getZoom().toFixed(3)}`);
 }
 
 function getEventContainerPoint(event) {
@@ -275,11 +251,33 @@ function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
+// URLに ?debug を付けると画面左下にイベントログを表示する(実機での切り分け用)
+const DEBUG_ENABLED = new URLSearchParams(window.location.search).has("debug");
+let debugPanel = null;
+const debugLines = [];
+
+function debugLog(line) {
+  if (!DEBUG_ENABLED) return;
+
+  if (!debugPanel) {
+    debugPanel = document.createElement("pre");
+    debugPanel.style.cssText =
+      "position:fixed;left:8px;bottom:8px;z-index:9999;margin:0;padding:6px 8px;" +
+      "max-width:70vw;overflow:hidden;background:rgba(0,0,0,.72);color:#9f9;" +
+      "font:10px/1.5 monospace;border-radius:6px;pointer-events:none;white-space:pre;";
+    document.body.append(debugPanel);
+  }
+
+  debugLines.push(line);
+  if (debugLines.length > 8) debugLines.shift();
+  debugPanel.textContent = debugLines.join("\n");
+}
+
 function scheduleMapCenterListUpdate() {
   if (state.userLatLng) return;
 
   window.clearTimeout(state.renderTimer);
-  state.renderTimer = window.setTimeout(renderSpots, 180);
+  state.renderTimer = window.setTimeout(renderNearbyList, 180);
 }
 
 function isInSapporo(coords) {
@@ -394,49 +392,51 @@ async function loadSpots() {
 }
 
 function renderSpots() {
+  renderMarkers();
+  renderNearbyList();
+}
+
+function renderMarkers() {
   const visibleFeatures = state.features.filter((feature) => {
     const kind = getKind(feature);
     if (kind === "cool") return filterCool.checked;
     if (kind === "toilet") return filterToilet.checked;
     return true;
   });
-  const reference = getReferenceLatLng();
-  const visibleItems = [];
 
   state.spotsLayer.clearLayers();
-  spotsEl.replaceChildren();
+  state.visibleItems = [];
 
   visibleFeatures.forEach((feature) => {
     const coords = getLatLng(feature);
     if (!coords) return;
 
-    const kind = getKind(feature);
     const marker = L.marker(coords, {
-      icon: makeIcon(kind),
+      icon: makeIcon(getKind(feature)),
       title: feature.properties?.name || "名称未設定",
     }).bindPopup(makePopup(feature));
 
     marker.addTo(state.spotsLayer);
-    visibleItems.push({
-      feature,
-      coords,
-      marker,
-      distance: reference.distanceTo(coords),
-    });
+    state.visibleItems.push({ feature, coords, marker });
   });
+}
 
-  const nearbyItems = visibleItems
+function renderNearbyList() {
+  const reference = getReferenceLatLng();
+  const nearbyItems = state.visibleItems
+    .map((item) => ({ ...item, distance: reference.distanceTo(item.coords) }))
     .sort((a, b) => a.distance - b.distance)
     .slice(0, NEARBY_LIST_LIMIT);
 
+  spotsEl.replaceChildren();
   nearbyItems.forEach((item) => {
     spotsEl.append(makeSpotItem(item.feature, item.coords, item.marker, item.distance));
   });
 
   spotCount.textContent =
-    visibleItems.length > nearbyItems.length
-      ? `${nearbyItems.length}/${visibleItems.length}件`
-      : `${visibleItems.length}件`;
+    state.visibleItems.length > nearbyItems.length
+      ? `${nearbyItems.length}/${state.visibleItems.length}件`
+      : `${state.visibleItems.length}件`;
 }
 
 function makeSpotItem(feature, coords, marker, distance) {
