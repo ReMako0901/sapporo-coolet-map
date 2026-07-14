@@ -6,6 +6,8 @@ const SAPPORO_BOUNDS = [
 const DEFAULT_ZOOM = 15;
 const DATA_URL = "./data/spots.geojson";
 const NEARBY_LIST_LIMIT = 30;
+const TRACKPAD_ZOOM_SENSITIVITY = 0.012;
+const TRACKPAD_PAN_MAX_DELTA = 160;
 
 const statusEl = document.querySelector("#status");
 const locationDialog = document.querySelector("#location-dialog");
@@ -22,6 +24,8 @@ const state = {
   userLatLng: null,
   spotsLayer: null,
   features: [],
+  renderTimer: null,
+  lastGestureScale: 1,
 };
 
 const iconConfig = {
@@ -90,6 +94,8 @@ function initializeMap(center) {
     zoomControl: true,
     attributionControl: true,
     minZoom: 10,
+    maxZoom: 19,
+    scrollWheelZoom: false,
     zoomSnap: 0.25,
     zoomDelta: 0.5,
   }).setView(center, DEFAULT_ZOOM);
@@ -104,6 +110,8 @@ function initializeMap(center) {
   state.spotsLayer = L.layerGroup().addTo(state.map);
   loadSpots();
   installMapResizeHandlers();
+  installTrackpadMapHandlers();
+  state.map.on("moveend", scheduleMapCenterListUpdate);
   refreshMapSize();
 }
 
@@ -126,6 +134,96 @@ function installMapResizeHandlers() {
   window.addEventListener("orientationchange", () => {
     setTimeout(refreshMapSize, 350);
   });
+}
+
+function installTrackpadMapHandlers() {
+  const container = state.map.getContainer();
+
+  container.addEventListener("wheel", handleMapWheel, {
+    passive: false,
+  });
+  container.addEventListener("gesturestart", handleGestureStart, {
+    passive: false,
+  });
+  container.addEventListener("gesturechange", handleGestureChange, {
+    passive: false,
+  });
+}
+
+function handleMapWheel(event) {
+  if (event.target instanceof Element && event.target.closest(".leaflet-control")) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  if (event.ctrlKey || event.metaKey) {
+    const zoomDelta = clamp(
+      -normalizeWheelDelta(event.deltaY, event.deltaMode) * TRACKPAD_ZOOM_SENSITIVITY,
+      -0.75,
+      0.75,
+    );
+    zoomMapAroundPointer(event, zoomDelta);
+    return;
+  }
+
+  state.map.panBy(
+    [
+      clamp(normalizeWheelDelta(event.deltaX, event.deltaMode), -TRACKPAD_PAN_MAX_DELTA, TRACKPAD_PAN_MAX_DELTA),
+      clamp(normalizeWheelDelta(event.deltaY, event.deltaMode), -TRACKPAD_PAN_MAX_DELTA, TRACKPAD_PAN_MAX_DELTA),
+    ],
+    {
+      animate: false,
+    },
+  );
+}
+
+function handleGestureStart(event) {
+  event.preventDefault();
+  state.lastGestureScale = event.scale || 1;
+}
+
+function handleGestureChange(event) {
+  event.preventDefault();
+
+  const nextScale = event.scale || 1;
+  const zoomDelta = clamp(Math.log2(nextScale / state.lastGestureScale), -0.5, 0.5);
+  state.lastGestureScale = nextScale;
+  zoomMapAroundPointer(event, zoomDelta);
+}
+
+function zoomMapAroundPointer(event, zoomDelta) {
+  if (!Number.isFinite(zoomDelta) || Math.abs(zoomDelta) < 0.01) return;
+
+  const nextZoom = clamp(
+    state.map.getZoom() + zoomDelta,
+    state.map.getMinZoom(),
+    state.map.getMaxZoom(),
+  );
+  state.map.setZoomAround(getEventContainerPoint(event), nextZoom, {
+    animate: false,
+  });
+}
+
+function getEventContainerPoint(event) {
+  if (Number.isFinite(event.clientX) && Number.isFinite(event.clientY)) {
+    return state.map.mouseEventToContainerPoint(event);
+  }
+
+  return state.map.getSize().divideBy(2);
+}
+
+function normalizeWheelDelta(delta, mode) {
+  if (!Number.isFinite(delta)) return 0;
+  if (mode === WheelEvent.DOM_DELTA_LINE) return delta * 16;
+  if (mode === WheelEvent.DOM_DELTA_PAGE) return delta * window.innerHeight;
+  return delta;
+}
+
+function scheduleMapCenterListUpdate() {
+  if (state.userLatLng) return;
+
+  window.clearTimeout(state.renderTimer);
+  state.renderTimer = window.setTimeout(renderSpots, 180);
 }
 
 function isInSapporo(coords) {
