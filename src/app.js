@@ -26,6 +26,7 @@ const state = {
   features: [],
   renderTimer: null,
   lastGestureScale: 1,
+  gestureStartedOnMap: false,
 };
 
 const iconConfig = {
@@ -139,6 +140,22 @@ function installMapResizeHandlers() {
 function installTrackpadMapHandlers() {
   const container = state.map.getContainer();
 
+  window.addEventListener("wheel", handleMapWheel, {
+    capture: true,
+    passive: false,
+  });
+  window.addEventListener("gesturestart", handleGestureStart, {
+    capture: true,
+    passive: false,
+  });
+  window.addEventListener("gesturechange", handleGestureChange, {
+    capture: true,
+    passive: false,
+  });
+  window.addEventListener("gestureend", handleGestureEnd, {
+    capture: true,
+    passive: false,
+  });
   container.addEventListener("wheel", handleMapWheel, {
     passive: false,
   });
@@ -148,13 +165,18 @@ function installTrackpadMapHandlers() {
   container.addEventListener("gesturechange", handleGestureChange, {
     passive: false,
   });
+  container.addEventListener("gestureend", handleGestureEnd, {
+    passive: false,
+  });
 }
 
 function handleMapWheel(event) {
   if (event.target instanceof Element && event.target.closest(".leaflet-control")) return;
+  if (!isMapPointEvent(event)) return;
 
   event.preventDefault();
   event.stopPropagation();
+  event.stopImmediatePropagation();
 
   if (event.ctrlKey || event.metaKey) {
     const zoomDelta = clamp(
@@ -178,17 +200,47 @@ function handleMapWheel(event) {
 }
 
 function handleGestureStart(event) {
+  state.gestureStartedOnMap = isMapPointEvent(event);
+  if (!state.gestureStartedOnMap) return;
+
   event.preventDefault();
+  event.stopPropagation();
   state.lastGestureScale = event.scale || 1;
 }
 
 function handleGestureChange(event) {
+  if (!state.gestureStartedOnMap) return;
+
   event.preventDefault();
+  event.stopPropagation();
 
   const nextScale = event.scale || 1;
   const zoomDelta = clamp(Math.log2(nextScale / state.lastGestureScale), -0.5, 0.5);
   state.lastGestureScale = nextScale;
   zoomMapAroundPointer(event, zoomDelta);
+}
+
+function handleGestureEnd(event) {
+  if (!state.gestureStartedOnMap) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+  state.gestureStartedOnMap = false;
+  state.lastGestureScale = 1;
+}
+
+function isMapPointEvent(event) {
+  if (!Number.isFinite(event.clientX) || !Number.isFinite(event.clientY)) {
+    return event.target instanceof Element && Boolean(event.target.closest("#map"));
+  }
+
+  const rect = state.map.getContainer().getBoundingClientRect();
+  return (
+    event.clientX >= rect.left &&
+    event.clientX <= rect.right &&
+    event.clientY >= rect.top &&
+    event.clientY <= rect.bottom
+  );
 }
 
 function zoomMapAroundPointer(event, zoomDelta) {
@@ -217,6 +269,10 @@ function normalizeWheelDelta(delta, mode) {
   if (mode === WheelEvent.DOM_DELTA_LINE) return delta * 16;
   if (mode === WheelEvent.DOM_DELTA_PAGE) return delta * window.innerHeight;
   return delta;
+}
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
 }
 
 function scheduleMapCenterListUpdate() {
